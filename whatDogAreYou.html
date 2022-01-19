@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>What Dog Are You?</title>
+</head>
+<body>
+
+    <main class="wrapper">
+        
+        <section class="quizMenu">
+            <section class="decorativeElements">
+                <img src="bone.png" aria-hidden="true" class="bone">
+                <img src="paw-solid.svg" aria-hidden="true" class="paw">
+            </section>
+            <section class="quizStartPage">
+                <div class="quizStartMenu">
+                    <h1>What Dog Are You?</h1>
+                    <p>Take This Quiz to Find Out!</p>
+                </div>
+                <button class="quizStart">Start</button>
+            </section>
+
+            <section class="quizMain">            
+                <div class="quizProgressTracker">
+                    <h3> Question : <span class="questionNumber"></span> / 10</h3>
+                </div>
+                <div class="quizQuestion">
+                    <h2 id="question">Question</h2>
+                </div>
+                <div class="quizAnswers" role="radiogroup">
+                    <span>
+                        <input type="radio" id="optionA" name="option" class="option" value="optionA" />
+                        <label for="optionA" class="option" id="optionALabel" tabindex="0">Answer 1</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="optionB" name="option" class="option" value="optionB" />
+                        <label for="optionB" class="option" id="optionBLabel" tabindex="0">Answer 2</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="optionC" name="option" class="option" value="optionC" />
+                        <label for="optionC" class="option" id="optionCLabel" tabindex="0">Answer 3</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="optionD" name="option" class="option" value="optionD" />
+                        <label for="optionD" class="option" id="optionDLabel" tabindex="0">Answer 4</label>
+                    </span>
+            </div>
+
+            <div class="quizNextButton">
+                <button class="nextQuestion">Next Question</button>
+            </div>
+            </section>
+
+            <section class="quizEndPage">
+                <div class="quizResults">
+                    <h1 class="resultsH1"></h1>
+                    <p class="resultsP"></p>
+                    <button class="restartButton">Replay Quiz</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>
