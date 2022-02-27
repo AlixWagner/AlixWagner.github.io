@@ -9,15 +9,15 @@
 </head>
 <body>
     <header>
-        <a class="logo" href="#home">
+        <a class="logo" href="./index.html">
             <img src="" alt="Alix Wagner's logo image">
         </a>
         <nav class="mainNav">
             <ul class="mainNavList">
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" target="_blank">Resume</a></li>
             </ul> 
         </nav>
         <div class="wrapper">
@@ -32,39 +32,182 @@
         </div>
         <!-- NOTE TO SELF --- This will be fixed and stay on screen as you scroll -->
         <nav class="socialsNav">
-            <a href="#">
+            <a href="#" target="_blank">
                 <span class="sr-only">email</span>
                 <i class="INSERT FONTAWESOME CODE HERE"></i>
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
                 <span class="sr-only">gitHub</span>
                 <i class="INSERT FONTAWESOME CODE HERE"></i>
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
                 <span class="sr-only">LinkedIn</span>
                 <i class="INSERT FONTAWESOME CODE HERE"></i>
             </a>
         </nav>
-        <div class="scrollArrow">
+        <div class="scrollDown">
             <i class="INSERT FONTAWESOME CODE HERE"></i>
         </div>
     </header>
     <main>
+        <div class="stickyBackground">
+            <div class="floatingBubble bubble2"></div>
+            <div class="floatingBubble bubble3"></div>
+            <div class="floatingBubble bubble4"></div>
+            <div class="floatingBubble bubble5"></div>
+            <div class="floatingBubble bubble6"></div>
+            <div class="floatingBubble bubble7"></div>
+        </div>
         <section class="about" id="about">
             <div class="wrapper">
                 <div class="flexContainer">
+                    <!-- h2 will be position: absolute; to position above the actual container -->
                     <h2>About</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis provident
-                        officia necessitatibus, officiis id quaerat, doloribus dolorum eligendi ab
-                        commodi aut tenetur recusandae ut ad molestias libero, corporis vero quos
-                        amet sed. Expedita, voluptate voluptates velit consectetur similique, ex
-                        delectus quibusdam modi, nulla sed debitis!</p>
+                    <h3>Hi, I'm Alix!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis provident officia necessitatibus, officiis id quaerat, doloribus dolorum eligendi ab commodi aut tenetur recusandae ut ad molestias libero, corporis vero quos amet sed. Expedita, voluptate voluptates velit consectetur similique, ex delectus quibusdam modi, nulla sed debitis!</p>
                     <div class="buttonContainer">
                         <button class="contactButton">Contact Me</button>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="skills">
+            <div class="wrapper">
+                <div class="flexContainer">
+                    <h2>Skills</h2>
+                    <ul class="skillsList">
+                        <!-- insert some sort of skills nonsensery here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="wrapper">
+                <div class="flexContainer">
+                    <h2>Projects</h2>
+                    <ul class="projectsList">
+                        <li tabindex="0" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src="" alt="a rendering of the site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3>SITE/APP NAME</h3>
+                                <p class="appLanguages">html, css, etc.</p>
+                                <p class="appDescription"> SITE/APP DESCRIPTION</p>
+                                <div class="buttonContainer">
+                                    <a href="#" target="_blank">
+                                        <button class="liveSite">Live</button>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <button class="repoSite">Repo</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src=""
+                                        alt="a rendering of the site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3>SITE/APP NAME</h3>
+                                <p class="appLanguages">html, css, etc.</p>
+                                <p class="appDescription"> SITE/APP DESCRIPTION</p>
+                                <div class="buttonContainer">
+                                    <a href="#" target="_blank">
+                                        <button class="liveSite">Live</button>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <button class="repoSite">Repo</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src=""
+                                        alt="a rendering of the site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3>SITE/APP NAME</h3>
+                                <p class="appLanguages">html, css, etc.</p>
+                                <p class="appDescription"> SITE/APP DESCRIPTION</p>
+                                <div class="buttonContainer">
+                                    <a href="#" target="_blank">
+                                        <button class="liveSite">Live</button>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <button class="repoSite">Repo</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src=""
+                                        alt="a rendering of the site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3>SITE/APP NAME</h3>
+                                <p class="appLanguages">html, css, etc.</p>
+                                <p class="appDescription"> SITE/APP DESCRIPTION</p>
+                                <div class="buttonContainer">
+                                    <a href="#" target="_blank">
+                                        <button class="liveSite">Live</button>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <button class="repoSite">Repo</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <div class="flexContainer">
+                    <!-- h2 will be position: absolute; to position above the actual container -->
+                    <h2>Contact</h2>
+                    <h3>Say Hello!</h3>
+                    <form action="#" method="POST" name="contactForm" class="contactForm">
+                        <div class="firstLine">
+                            <div class="formSection userName">
+                                <label for="userName" class="sr-only">Name</label>
+                                <input placeholder="Name" type="text" id="userName" name="userName"
+                                    required>
+                            </div>
+                            <div class="formSection userEmail">
+                                <label class="sr-only" for="userEmail">Email</label>
+                                <input placeholder="Email address" type="email" id="userEmail"
+                                    name="userEmail" required>
+                            </div>
+                        </div>
+                        <div class="userComment">
+                            <label class="sr-only" for="userComment">Message</label>
+                            <textarea placeholder="Message" name="userComment"
+                                id="userComment"></textarea>
+                        </div>
+                        <div class="buttonContainer">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="./javascript/app.js"></script>
 </body>
 </html>
