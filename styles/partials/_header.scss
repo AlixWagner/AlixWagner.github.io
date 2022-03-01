@@ -1,0 +1,94 @@
+header {
+    min-height: 100vh;
+    .mainNav {
+        margin: 20px auto;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            height: 80px;
+            img {
+                height: 100%;
+            }
+        }
+        .mainNavList {
+            display: flex;
+            justify-content: space-between;
+            min-width: 400px;
+            width: 50%;
+            li {
+                width: 80px;
+                position: relative;
+                text-align: center;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    border-radius: 70% 30% 60% 40%/30% 50% 50% 60%;
+                    width: 60%;
+                    height: 1.2rem;
+                    background-color: rgb(137, 217, 231);
+                    left: 50%;
+                    margin-left: -24px;
+                    z-index: -5;
+                    transform: rotate(-10deg);
+                }
+            }
+        };
+    };
+    .heroHeader {
+        display: flex;
+        align-items: flex-end;
+        height: calc(100vh - 120px);
+        .imgContainer {
+            width: 30%;
+            max-height: 455px;
+            min-width: 240px;
+            margin-top: 10vh;
+            position: relative;
+            bottom: 30%;
+            left: 20px;
+            &::before {
+                content: "";
+                left: -20px;
+                min-width: 300px;
+                height: 70%;
+                width: 150%;
+                top: 40%;
+                z-index: -10;
+                transform: rotate(-15deg);
+                border-radius: 70% 50% 40% 60%/60% 70% 50% 60%;
+                background-color: #a0d5df;
+                position: absolute;
+                box-shadow: 40px -20px 0 #2a2c2e, -30px 10px 0 #2a2c2e, -40px -20px 0 #2a2c2e, -43px -22px 0 white;
+            }
+            .stylingElement {
+                width: 100%;
+                height: 100%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 60%;
+                    height: 20%;
+                    border: 3px solid white;
+                    bottom: -25%;
+                    transform: rotate(0deg) perspective(200px) rotateY(45deg);
+                    border-radius: 10% 40% 20% 20%/20% 45% 30% 80%;
+                    left: 0;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 10%;
+                    height: 8%;
+                    border: 2px solid white;
+                    bottom: -17%;
+                    transform: rotate(-30deg);
+                    left: 60%;
+                    border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
+                }
+            }
+        }
+    }
+}

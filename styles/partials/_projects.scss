@@ -1,2 +1,53 @@
 // CARDS STYLING
 // 
+.projects {
+    .projectsList {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .projectCard {
+            background: #2a2b3370;
+            backdrop-filter:blur(5px);
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            border-radius: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            .cardFront,
+            .cardBack {
+                backface-visibility: hidden;
+                display: flex;
+                flex-direction: column;
+            };
+            .cardFront {
+                padding: 20px;
+                width: 100%;
+                height: 100%;
+                transform: rotateX(0deg);
+            };
+            .cardBack {
+                padding: 20px;
+                width: 100%;
+                height: 100%;
+                transform: rotateY(180deg);
+                position: absolute;
+                text-align: center;
+                right: 0;
+                left: 0;
+                top: 10px;
+                color: white;
+            };
+            &:hover {
+                box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+                transform: translateY(-2px);
+            }
+        };
+        .projectCard.flip {
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+        };
+    };
+};

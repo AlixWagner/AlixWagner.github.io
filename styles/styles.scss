@@ -1,10 +1,11 @@
 @import "partials/setup";
 @import "partials/variables";
 @import "partials/typography";
-@import "partials/header";
 @import "partials/animations";
+@import "partials/header";
+@import "partials/sections";
 @import "partials/projects";
 
 html {
-    background-color: #212229;
+    background-color: #2a2c2e;
 }
