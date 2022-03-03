@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&family=Urbanist:wght@200;300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css"></style>
     <title>Alix Wagner</title>
 </head>
@@ -12,12 +17,19 @@
         <div class="wrapper">
             <nav class="mainNav">
                 <a class="logo" href="./index.html">
+                    <p class="sr-only">Home Page</p>
                     <img src="./styles/assets/AlixWagnerLogo.png" alt="Alix Wagner's logo image">
                 </a>
                 <ul class="mainNavList">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a class="nav aboutLink" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="nav projectLink" href="#projects">Projects</a>
+                    </li>
+                    <li >
+                        <a class="nav contactLink" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
             <div class="heroHeader">
@@ -28,13 +40,16 @@
                 </div>
                 <div class="textContainer">
                     <h1>Alix Wagner</h1>
-                    <p>Web Developer</p>
+                    <p class="jobTitle">Web Developer.</p>
                 </div>
-                <div class="floatingBubble bubble1"></div>
+                <div class="floatingBubble bubble1">
+                    <div class="stylingElement one"></div>
+                    <div class="stylingElement two"></div>
+                </div>
             </div>
         </div>
         <!-- NOTE TO SELF --- This will be fixed and stay on screen as you scroll -->
-        <nav class="socialsNav">
+        <!-- <nav class="socialsNav">
             <a href="#" target="_blank">
                 <span class="sr-only">email</span>
                 <i class="INSERT FONTAWESOME CODE HERE"></i>
@@ -47,7 +62,7 @@
                 <span class="sr-only">LinkedIn</span>
                 <i class="INSERT FONTAWESOME CODE HERE"></i>
             </a>
-        </nav>
+        </nav> -->
         <div class="scrollDown">
             <i class="INSERT FONTAWESOME CODE HERE"></i>
         </div>
@@ -93,18 +108,18 @@
                         <li tabindex="0" class="projectCard">
                             <div class="cardFront">
                                 <div class="imgContainer">
-                                    <img src="" alt="a rendering of the site on a laptop and a mobile phone.">
+                                    <img src="./styles/assets/HarperSiteDisplay.png" alt="a rendering of the Harper Blog site on a laptop and a mobile phone.">
                                 </div>
                             </div>
                             <div class="cardBack">
-                                <h3>SITE/APP NAME</h3>
-                                <p class="appLanguages">html, css, etc.</p>
+                                <h3>HARPER</h3>
+                                <p class="appLanguages">HTML||SCSS</p>
                                 <p class="appDescription"> SITE/APP DESCRIPTION</p>
                                 <div class="buttonContainer">
-                                    <a href="#" target="_blank">
+                                    <a href="https://harper-blog.netlify.app/" target="_blank">
                                         <button class="liveSite">Live</button>
                                     </a>
-                                    <a href="#" target="_blank">
+                                    <a href="https://github.com/AlixWagner/alix-wagner-project-1" target="_blank">
                                         <button class="repoSite">Repo</button>
                                     </a>
                                 </div>
@@ -113,19 +128,19 @@
                         <li tabindex="0" class="projectCard">
                             <div class="cardFront">
                                 <div class="imgContainer">
-                                    <img src=""
-                                        alt="a rendering of the site on a laptop and a mobile phone.">
+                                    <img src="./styles/assets/CocktailSiteDisplay.png"
+                                        alt="a rendering of the Cocktail Recipe site on a laptop and a mobile phone.">
                                 </div>
                             </div>
                             <div class="cardBack">
-                                <h3>SITE/APP NAME</h3>
-                                <p class="appLanguages">html, css, etc.</p>
+                                <h3>Cocktail Connoisseur</h3>
+                                <p class="appLanguages">HTML||SCSS||APIs</p>
                                 <p class="appDescription"> SITE/APP DESCRIPTION</p>
                                 <div class="buttonContainer">
-                                    <a href="#" target="_blank">
+                                    <a href="https://cocktail-connoisseur.netlify.app/" target="_blank">
                                         <button class="liveSite">Live</button>
                                     </a>
-                                    <a href="#" target="_blank">
+                                    <a href="https://github.com/AlixWagner/Project2CocktailApp" target="_blank">
                                         <button class="repoSite">Repo</button>
                                     </a>
                                 </div>

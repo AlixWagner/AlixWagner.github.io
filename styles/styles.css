@@ -265,6 +265,41 @@ a {
 
 html {
   font-size: 125%;
+  font-family: "Poppins", sans-serif;
+  color: #ecf1f3;
+}
+
+h1, h2 {
+  font-family: "Urbanist", sans-serif;
+}
+
+h1 {
+  color: #ecf1f3;
+  font-size: clamp(3rem, 16vw, 12rem);
+  line-height: clamp(3rem, 16vw, 12rem);
+}
+
+h2 {
+  color: black;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+p.jobTitle {
+  font-size: clamp(0.9rem, 2.6vw, 1.9rem);
+  line-height: 0.8rem;
+  text-align: right;
+}
+
+a {
+  color: #ecf1f3;
+}
+a.nav {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px #2a2c2e;
 }
 
 header {
@@ -285,10 +320,31 @@ header .mainNav {
           align-items: center;
 }
 header .mainNav .logo {
-  height: 80px;
+  height: 100px;
+  position: relative;
 }
 header .mainNav .logo img {
   height: 100%;
+}
+header .mainNav .logo::before {
+  position: absolute;
+  content: "";
+  border-radius: 70% 30% 60% 40%/30% 50% 50% 60%;
+  width: 60px;
+  height: 80px;
+  background-color: transparent;
+  left: 7px;
+  top: 6px;
+  z-index: -5;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+header .mainNav .logo:hover::before, header .mainNav .logo:focus::before {
+  background-color: #9ac2c9;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 header .mainNav .mainNavList {
   display: -webkit-box;
@@ -300,21 +356,37 @@ header .mainNav .mainNavList {
   min-width: 400px;
   width: 50%;
 }
-header .mainNav .mainNavList li {
+header .mainNav .mainNavList a {
   width: 80px;
   position: relative;
   text-align: center;
 }
-header .mainNav .mainNavList li::before {
+header .mainNav .mainNavList a::before {
   position: absolute;
   content: "";
-  border-radius: 70% 30% 60% 40%/30% 50% 50% 60%;
-  width: 60%;
-  height: 1.2rem;
-  background-color: #89d9e7;
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
   left: 50%;
-  margin-left: -24px;
+  margin-left: -40%;
   z-index: -5;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+header .mainNav .mainNavList a:hover::before, header .mainNav .mainNavList a:focus::before {
+  background-color: #d197b2;
+  border-radius: 80% 20% 60% 20%/40% 70% 30% 40%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+header .mainNav .mainNavList .aboutLink::before {
+  border-radius: 30% 30% 40% 40%/70% 40% 90% 60%;
+}
+header .mainNav .mainNavList .projectLink::before {
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
 }
@@ -322,10 +394,15 @@ header .heroHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   height: calc(100vh - 120px);
+  width: 100%;
 }
 header .heroHeader .imgContainer {
   width: 30%;
@@ -333,8 +410,8 @@ header .heroHeader .imgContainer {
   min-width: 240px;
   margin-top: 10vh;
   position: relative;
-  bottom: 30%;
-  left: 20px;
+  bottom: 40%;
+  left: 30px;
 }
 header .heroHeader .imgContainer::before {
   content: "";
@@ -347,10 +424,10 @@ header .heroHeader .imgContainer::before {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   border-radius: 70% 50% 40% 60%/60% 70% 50% 60%;
-  background-color: #a0d5df;
+  background-color: #9ac2c9;
   position: absolute;
-  -webkit-box-shadow: 40px -20px 0 #2a2c2e, -30px 10px 0 #2a2c2e, -40px -20px 0 #2a2c2e, -43px -22px 0 white;
-          box-shadow: 40px -20px 0 #2a2c2e, -30px 10px 0 #2a2c2e, -40px -20px 0 #2a2c2e, -43px -22px 0 white;
+  -webkit-box-shadow: 40px -20px 0 #2a2c2e, -30px 10px 0 #2a2c2e, -40px -20px 0 #2a2c2e, -43px -22px 0 #ecf1f3;
+          box-shadow: 40px -20px 0 #2a2c2e, -30px 10px 0 #2a2c2e, -40px -20px 0 #2a2c2e, -43px -22px 0 #ecf1f3;
 }
 header .heroHeader .imgContainer .stylingElement {
   width: 100%;
@@ -361,7 +438,7 @@ header .heroHeader .imgContainer .stylingElement::before {
   position: absolute;
   width: 60%;
   height: 20%;
-  border: 3px solid white;
+  border: 3px solid #ecf1f3;
   bottom: -25%;
   -webkit-transform: rotate(0deg) perspective(200px) rotateY(45deg);
           transform: rotate(0deg) perspective(200px) rotateY(45deg);
@@ -373,14 +450,77 @@ header .heroHeader .imgContainer .stylingElement::after {
   position: absolute;
   width: 10%;
   height: 8%;
-  border: 2px solid white;
+  border: 2px solid #ecf1f3;
   bottom: -17%;
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
   left: 60%;
   border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
 }
-
+header .heroHeader .textContainer {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 80%;
+  position: relative;
+  top: 15%;
+  padding-right: 40px;
+}
+header .heroHeader .textContainer h1 {
+  width: 5.5ch;
+}
+header .heroHeader .bubble1 {
+  position: absolute;
+  height: 30%;
+  width: 55%;
+  top: 10%;
+  right: -30px;
+  z-index: -10;
+  -webkit-transform: rotate(7deg) perspective(1000px) rotateY(-45deg);
+          transform: rotate(7deg) perspective(1000px) rotateY(-45deg);
+  border-radius: 20% 30% 40% 30%/40% 40% 90% 80%;
+  background-color: #d197b2;
+}
+header .heroHeader .bubble1::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  border: 4px solid #ecf1f3;
+  top: 10%;
+  left: -10%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+header .heroHeader .bubble1::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 8%;
+  border: 2px solid #ecf1f3;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  top: 50%;
+  left: 35%;
+}
+header .heroHeader .bubble1 .stylingElement {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  top: 15%;
+  right: -5%;
+  z-index: -10;
+  background-color: #ece1ad;
+}
 .about .wrapper .flexContainer {
   padding: 30px;
   display: -webkit-box;
@@ -390,7 +530,7 @@ header .heroHeader .imgContainer .stylingElement::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #2d2e38;
+  background-color: #2a2c2e;
 }
 
 .projects .projectsList {
@@ -404,7 +544,7 @@ header .heroHeader .imgContainer .stylingElement::after {
       flex-wrap: wrap;
 }
 .projects .projectsList .projectCard {
-  background: #2a2b3370;
+  background: rgba(64, 65, 70, 0.192);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   display: -webkit-box;
@@ -414,7 +554,6 @@ header .heroHeader .imgContainer .stylingElement::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 20px;
   border-radius: 16px;
   cursor: pointer;
   text-align: center;
@@ -437,6 +576,9 @@ header .heroHeader .imgContainer .stylingElement::after {
 }
 .projects .projectsList .projectCard .cardFront {
   padding: 20px;
+  border-radius: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.144);
+  border-left: 1px solid rgba(255, 255, 255, 0.144);
   width: 100%;
   height: 100%;
   -webkit-transform: rotateX(0deg);
@@ -446,20 +588,19 @@ header .heroHeader .imgContainer .stylingElement::after {
   padding: 20px;
   width: 100%;
   height: 100%;
+  border-radius: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.144);
+  border-left: 1px solid rgba(255, 255, 255, 0.144);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   position: absolute;
   text-align: center;
   right: 0;
   left: 0;
-  top: 10px;
-  color: white;
 }
 .projects .projectsList .projectCard:hover {
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
 }
 .projects .projectsList .projectCard.flip {
   -webkit-transform: rotateY(180deg);
