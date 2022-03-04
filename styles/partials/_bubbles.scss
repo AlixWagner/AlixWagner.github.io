@@ -1,0 +1,114 @@
+
+main {
+    .stickyScroll {
+        position: sticky;
+        top: 90vh;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        .scrollUp {
+            right: 5%;
+            color: $white;
+            opacity: 0.5;
+            position: absolute;
+            font-size: 0.5rem;
+            transition: 0.4s;
+            .fa-chevron-up {
+                right: 5%;
+                color: $white;
+                position: absolute;
+                font-size: 3rem;
+                transition: 0.4s;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    position: relative;
+    .stickyBackground {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        right: 0;
+        .wrapper {
+            position: sticky;
+            top: 0;
+            margin-bottom: 850px;
+            .floatingBubble {
+                position: absolute;
+                transition: 0.6s;
+            }
+            .bubble2 {
+                width: 120px;
+                height: 80px;
+                background-color: transparent;
+                border: 3px solid $accentTwo;
+                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+                top: 5vh;
+                right: -5%;
+                transform: rotate(10deg);
+            }
+            .bubble3 {
+                width: 200px;
+                height: 120px;
+                background-color: transparent;
+                border: 3px solid $accentTwo;
+                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+                top: 35vh;
+                right: -3%;
+                transform: rotate(5deg);
+            }
+            .bubble4 {
+                width: 120px;
+                height: 120px;
+                background-color: transparent;
+                border: 3px solid $accentTwo;
+                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+                top: 20vh;
+                left: -5%;
+                transform: rotate(30deg);
+            }
+            .bubble5 {
+                width: 240px;
+                height: 160px;
+                background-color: transparent;
+                border: 3px solid $accentTwo;
+                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+                top: 48vh;
+                left: 40%;
+                transform: rotate(-20deg);
+            }
+            .bubble6 {
+                width: 120px;
+                height: 80px;
+                background-color: transparent;
+                border: 3px solid $accentTwo;
+                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+                top: 15vh;
+                left: 50%;
+                transform: rotate(10deg);
+            }
+            .bubble7 {
+                width: 160px;
+                height: 180px;
+                background-color: transparent;
+                border: 3px solid $accentTwo;
+                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+                top: 60vh;
+                left: -5%;
+                transform: rotate(-10deg);
+            }
+            .bubble8 {
+                width: 240px;
+                height: 140px;
+                background-color: transparent;
+                border: 3px solid $accentTwo;
+                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+                top: 75vh;
+                right: 5%;
+                transform: rotate(10deg);
+            }
+        }
+    }
+}

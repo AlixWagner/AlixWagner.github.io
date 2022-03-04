@@ -2,9 +2,11 @@
 @import "partials/variables";
 @import "partials/typography";
 @import "partials/animations";
+@import "partials/bubbles";
 @import "partials/header";
 @import "partials/sections";
 @import "partials/projects";
+@import "partials/footer";
 
 html {
     background-color: $darkPrimary;

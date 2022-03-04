@@ -4,3 +4,13 @@
 
 
 // PLEASE CONSIDER --- stretch goal --- blobs jiggle on click
+
+// animation for down arrow: 
+@keyframes slowBob {
+    0% {
+        transform: translateY(0) translateX(-50%);;
+    }
+    50% {
+        transform: translateY(10px) translateX(-50%);;
+    }
+}

@@ -4,7 +4,7 @@ html {
     color: $white;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: $headerFont;
 }
 
@@ -15,17 +15,30 @@ h1 {
 }
 
 h2 {
-    color: rgb(0, 0, 0);
+    color: $white;
+    position: absolute;
+    font-size: 1.8rem;
+    top: 20px;
+}
+h3 {
+    &.intro {
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 2rem;
+    }
 }
 
 p {
+    max-width: 70ch;
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.05rem;
+    padding: 30px 0 20px;
     &.jobTitle {
         font-size: clamp(0.9rem, 2.6vw, 1.9rem);
         line-height: 0.8rem;
         text-align: right;
+        padding: 0;
     }
 }
 
@@ -34,5 +47,10 @@ a {
     &.nav {
         font-size: 1.2rem;
         text-shadow: 1px 1px $darkPrimary;
+    }
+    &.contactButton {
+        font-size: 1.4rem;
+        font-family: $headerFont;
+        transition: 0.8s;
     }
 }

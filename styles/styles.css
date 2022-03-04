@@ -269,7 +269,7 @@ html {
   color: #ecf1f3;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Urbanist", sans-serif;
 }
 
@@ -280,18 +280,30 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: #ecf1f3;
+  position: absolute;
+  font-size: 1.8rem;
+  top: 20px;
+}
+
+h3.intro {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 2rem;
 }
 
 p {
+  max-width: 70ch;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.05rem;
+  padding: 30px 0 20px;
 }
 p.jobTitle {
   font-size: clamp(0.9rem, 2.6vw, 1.9rem);
   line-height: 0.8rem;
   text-align: right;
+  padding: 0;
 }
 
 a {
@@ -301,9 +313,161 @@ a.nav {
   font-size: 1.2rem;
   text-shadow: 1px 1px #2a2c2e;
 }
+a.contactButton {
+  font-size: 1.4rem;
+  font-family: "Urbanist", sans-serif;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+@-webkit-keyframes slowBob {
+  0% {
+    -webkit-transform: translateY(0) translateX(-50%);
+            transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    -webkit-transform: translateY(10px) translateX(-50%);
+            transform: translateY(10px) translateX(-50%);
+  }
+}
+
+@keyframes slowBob {
+  0% {
+    -webkit-transform: translateY(0) translateX(-50%);
+            transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    -webkit-transform: translateY(10px) translateX(-50%);
+            transform: translateY(10px) translateX(-50%);
+  }
+}
+main {
+  position: relative;
+}
+main .stickyScroll {
+  position: sticky;
+  top: 90vh;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+main .stickyScroll .scrollUp {
+  right: 5%;
+  color: #ecf1f3;
+  opacity: 0.5;
+  position: absolute;
+  font-size: 0.5rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+main .stickyScroll .scrollUp .fa-chevron-up {
+  right: 5%;
+  color: #ecf1f3;
+  position: absolute;
+  font-size: 3rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+main .stickyScroll .scrollUp:hover {
+  opacity: 1;
+}
+main .stickyBackground {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+main .stickyBackground .wrapper {
+  position: sticky;
+  top: 0;
+  margin-bottom: 850px;
+}
+main .stickyBackground .wrapper .floatingBubble {
+  position: absolute;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+main .stickyBackground .wrapper .bubble2 {
+  width: 120px;
+  height: 80px;
+  background-color: transparent;
+  border: 3px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  top: 5vh;
+  right: -5%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+main .stickyBackground .wrapper .bubble3 {
+  width: 200px;
+  height: 120px;
+  background-color: transparent;
+  border: 3px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  top: 35vh;
+  right: -3%;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+main .stickyBackground .wrapper .bubble4 {
+  width: 120px;
+  height: 120px;
+  background-color: transparent;
+  border: 3px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  top: 20vh;
+  left: -5%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+main .stickyBackground .wrapper .bubble5 {
+  width: 240px;
+  height: 160px;
+  background-color: transparent;
+  border: 3px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  top: 48vh;
+  left: 40%;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+main .stickyBackground .wrapper .bubble6 {
+  width: 120px;
+  height: 80px;
+  background-color: transparent;
+  border: 3px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  top: 15vh;
+  left: 50%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+main .stickyBackground .wrapper .bubble7 {
+  width: 160px;
+  height: 180px;
+  background-color: transparent;
+  border: 3px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  top: 60vh;
+  left: -5%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+main .stickyBackground .wrapper .bubble8 {
+  width: 240px;
+  height: 140px;
+  background-color: transparent;
+  border: 3px solid #d197b2;
+  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  top: 75vh;
+  right: 5%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
 
 header {
   min-height: 100vh;
+  position: relative;
 }
 header .mainNav {
   margin: 20px auto;
@@ -487,7 +651,7 @@ header .heroHeader .bubble1 {
   z-index: -10;
   -webkit-transform: rotate(7deg) perspective(1000px) rotateY(-45deg);
           transform: rotate(7deg) perspective(1000px) rotateY(-45deg);
-  border-radius: 20% 30% 40% 30%/40% 40% 90% 80%;
+  border-radius: 80% 30% 30% 30%/40% 40% 90% 80%;
   background-color: #d197b2;
 }
 header .heroHeader .bubble1::before {
@@ -500,6 +664,7 @@ header .heroHeader .bubble1::before {
   left: -10%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  border-radius: 70% 40% 20% 20%/40% 40% 80% 80%;
 }
 header .heroHeader .bubble1::after {
   content: "";
@@ -510,7 +675,8 @@ header .heroHeader .bubble1::after {
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
   top: 50%;
-  left: 35%;
+  left: 30%;
+  border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
 }
 header .heroHeader .bubble1 .stylingElement {
   position: absolute;
@@ -519,10 +685,71 @@ header .heroHeader .bubble1 .stylingElement {
   top: 15%;
   right: -5%;
   z-index: -10;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
   background-color: #ece1ad;
+  border-radius: 80% 80% 40% 90%/70% 90% 70% 90%;
 }
+header .heroHeader .bubble1 .stylingElement::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 60%;
+  border: 4px solid #ecf1f3;
+  bottom: -110%;
+  left: -35%;
+  -webkit-transform: rotate(0deg) perspective(700px) rotateY(-60deg);
+          transform: rotate(0deg) perspective(700px) rotateY(-60deg);
+  border-radius: 10% 10% 20% 20%/20% 20% 40% 80%;
+}
+header .heroHeader .bubble1 .stylingElement::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  border: 2px solid #ecf1f3;
+  -webkit-transform: rotate(12deg) rotateY(180deg);
+          transform: rotate(12deg) rotateY(180deg);
+  bottom: -70%;
+  left: -35%;
+  border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
+}
+header .scrollDown {
+  position: absolute;
+  -webkit-transition: padding 0.5s, background-color 0.5s, -webkit-transform 0.2s;
+  transition: padding 0.5s, background-color 0.5s, -webkit-transform 0.2s;
+  transition: padding 0.5s, background-color 0.5s, transform 0.2s;
+  transition: padding 0.5s, background-color 0.5s, transform 0.2s, -webkit-transform 0.2s;
+  bottom: 5vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #2a2c2e;
+  padding: -30px;
+  border-radius: 50%;
+  -webkit-animation: slowBob 1.4s infinite linear;
+          animation: slowBob 1.4s infinite linear;
+}
+header .scrollDown .fa-chevron-down {
+  color: #ecf1f3;
+  font-size: 3rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .scrollDown:hover .fa-chevron-down, header .scrollDown:focus .fa-chevron-down {
+  font-size: 3.3rem;
+}
+
+section {
+  padding-top: 70px;
+  position: relative;
+}
+section .flexContainer {
+  padding: 40px;
+  z-index: 10;
+}
+
 .about .wrapper .flexContainer {
-  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,23 +757,86 @@ header .heroHeader .bubble1 .stylingElement {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #2a2c2e;
+  padding-top: 50px;
+  background-color: #2f3335;
+  border-radius: 16px;
+  -webkit-box-shadow: -2px -2px 0 #484d50;
+          box-shadow: -2px -2px 0 #484d50;
+}
+.about .wrapper .flexContainer .buttonContainer {
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 10px 30px;
+}
+.about .wrapper .flexContainer .buttonContainer::before {
+  content: "";
+  z-index: 15;
+  position: absolute;
+  border: 3px solid #9ac2c9;
+  border-right: 3px solid transparent;
+  border-radius: 50px;
+  top: 0;
+  left: 15px;
+  height: 52px;
+  width: 52px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.about .wrapper .flexContainer .buttonContainer:hover::before, .about .wrapper .flexContainer .buttonContainer:focus-within::before {
+  right: 10px;
+  width: 175px;
+  border-right: 3px solid #9ac2c9;
+  background-color: #9ac2c9;
+}
+.about .wrapper .flexContainer .buttonContainer:hover .contactButton, .about .wrapper .flexContainer .buttonContainer:focus-within .contactButton {
+  color: #2f3335;
+}
+.about .wrapper .flexContainer .buttonContainer .contactButton {
+  position: relative;
+  z-index: 25;
 }
 
-.projects .projectsList {
+.skills .wrapper .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2f3335;
+  border-radius: 16px;
+  -webkit-box-shadow: -2px -2px 0 #484d50;
+          box-shadow: -2px -2px 0 #484d50;
+}
+
+.projects {
+  position: relative;
+}
+.projects .flexContainer {
+  padding: 0;
+}
+.projects .flexContainer h2 {
+  padding-left: 40px;
+}
+.projects .flexContainer .projectsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.projects .projectsList .projectCard {
-  background: rgba(64, 65, 70, 0.192);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+.projects .flexContainer .projectsList .projectCard {
+  -ms-flex-preferred-size: calc(50% - 20px);
+      flex-basis: calc(50% - 20px);
+  background: #34383a31;
+  -webkit-box-shadow: 0px 1px 5px rgba(20, 20, 21, 0.5);
+          box-shadow: 0px 1px 5px rgba(20, 20, 21, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,9 +851,10 @@ header .heroHeader .bubble1 .stylingElement {
   transition: 0.6s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  margin-bottom: 40px;
 }
-.projects .projectsList .projectCard .cardFront,
-.projects .projectsList .projectCard .cardBack {
+.projects .flexContainer .projectsList .projectCard .cardFront,
+.projects .flexContainer .projectsList .projectCard .cardBack {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   display: -webkit-box;
@@ -573,24 +864,27 @@ header .heroHeader .bubble1 .stylingElement {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.projects .projectsList .projectCard .cardFront {
-  padding: 20px;
+.projects .flexContainer .projectsList .projectCard .cardFront {
+  padding: 40px 40px 120px 40px;
   border-radius: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.144);
-  border-left: 1px solid rgba(255, 255, 255, 0.144);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
   width: 100%;
   height: 100%;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
 }
-.projects .projectsList .projectCard .cardBack {
-  padding: 20px;
+.projects .flexContainer .projectsList .projectCard .cardBack {
+  padding: 40px;
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.144);
-  border-left: 1px solid rgba(255, 255, 255, 0.144);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   position: absolute;
@@ -598,11 +892,12 @@ header .heroHeader .bubble1 .stylingElement {
   right: 0;
   left: 0;
 }
-.projects .projectsList .projectCard:hover {
-  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+.projects .flexContainer .projectsList .projectCard:hover, .projects .flexContainer .projectsList .projectCard:focus {
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  background: #2f333575;
 }
-.projects .projectsList .projectCard.flip {
+.projects .flexContainer .projectCard.flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   -webkit-transform-style: preserve-3d;
