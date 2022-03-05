@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Mrs+Sheppards&family=Poppins:wght@200;300;400;600&family=Urbanist:wght@200;300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <script src="https://kit.fontawesome.com/214b10b636.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css"></style>
     <title>Alix Wagner</title>
@@ -32,6 +33,23 @@
                         <a class="nav contactLink" href="#contact">Contact</a>
                     </li>
                 </ul>
+                <div class="headerNav">
+                    <input type="checkbox" id="toggle" name="toggle" />
+                    <label for="toggle">
+                        <div class="hamburgerMenuIcon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </label>
+                    <!-- <ul class="mainMenu">
+                        <li><a class="navLink" href="./index.html">Home</a></li>
+                        <li><a class="navLink" href="#">About</a></li>
+                        <li><a class="navLink" href="./blog.html">Blog</a></li>
+                        <li><a class="navLink" href="./contact.html">Contact</a></li>
+                    </ul> -->
+                </div>
             </nav>
             <div class="heroHeader">
                 <div class="imgContainer">
@@ -63,7 +81,7 @@
                 <i class="INSERT FONTAWESOME CODE HERE"></i>
             </a>
         </nav> -->
-        <a href="#about" class="scrollDown">
+        <a tabindex="-1" href="#about" class="scrollDown">
             <i class="fas fa-chevron-down"></i>
         </a>
     </header>
@@ -76,7 +94,7 @@
                 </a>
             </div>
         </div>
-        <div class="stickyBackground">
+        <!-- <div class="stickyBackground">
             <div class="wrapper">
                 <div class="floatingBubble bubble2"></div>
                 <div class="floatingBubble bubble3"></div>
@@ -86,7 +104,7 @@
                 <div class="floatingBubble bubble7"></div>
                 <div class="floatingBubble bubble8"></div>
             </div>
-        </div>
+        </div> -->
         <section class="about" id="about">
             <div class="wrapper">
                 <div class="flexContainer">
@@ -103,9 +121,57 @@
         <section class="skills">
             <div class="wrapper">
                 <div class="flexContainer">
-                    <h2>Skills</h2>
+                    <h2>Toolkit</h2>
                     <ul class="skillsList">
                         <!-- insert some sort of skills nonsensery here -->
+                        <li>
+                            <i class="fab fa-html5"></i>
+                            <p>HTML5</p>
+                        </li>
+                        <li>
+                            <i class="fab fa-css3-alt"></i>
+                            <p>CSS3</p>
+                        </li>
+                        <li>
+                            <i class="fab fa-sass"></i>
+                            <p>SCSS</p>
+                        </li>
+                        <li>
+                            <i class="devicon-firebase-plain"></i>
+                            <p>Firebase</p>
+                        </li>
+                        <li>
+                            <i class="fab fa-js-square"></i>
+                            <p>JavaScript</p>
+                        </li>
+                        <li>
+                            <i class="devicon-jquery-plain"></i>
+                            <p>jQuery</p>
+                        </li>
+                        <li>
+                            <i class="devicon-react-original"></i>
+                            <p>React</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-cogs"></i>
+                            <p>REST APIs</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-cloud"></i>
+                            <p>Adobe Creative Cloud</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Responsive Design</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-universal-access"></i>
+                            <p>WCAG Accessibility</p>
+                        </li>
+                        <li>
+                            <i class="devicon-github-original"></i>
+                            <p>Version Control</p>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -115,7 +181,7 @@
                 <div class="flexContainer">
                     <h2>Projects</h2>
                     <ul class="projectsList">
-                        <li tabindex="0" class="projectCard">
+                        <li tabindex="0" aria-label="" class="projectCard">
                             <div class="cardFront">
                                 <div class="imgContainer">
                                     <img src="./styles/assets/HarperSiteDisplay.png" alt="a rendering of the Harper Blog site on a laptop and a mobile phone.">
@@ -192,8 +258,6 @@
                 </div>
             </div>
         </section>
-    </main>
-    <footer>
         <section class="contact" id="contact">
             <div class="wrapper">
                 <div class="flexContainer">
@@ -201,7 +265,7 @@
                     <h2>Contact</h2>
                     <div class="formContainer">
                         <h3 class="greeting">Say Hello!</h3>
-                        <form action="#" method="POST" name="contactForm" class="contactForm">
+                        <form method="POST" name="contactForm" class="contactForm" netlify>
                             <div class="firstLine">
                                 <div class="formSection userName">
                                     <label for="userName" class="sr-only">Name</label>
@@ -259,6 +323,8 @@
                 </div>
             </div>
         </section>
+    </main>
+    <footer>
     </footer>
 
     <script src="./javascript/app.js"></script>

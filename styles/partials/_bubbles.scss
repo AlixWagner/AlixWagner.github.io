@@ -38,11 +38,13 @@ main {
             .floatingBubble {
                 position: absolute;
                 transition: 0.6s;
+                background-color: $accentTwo;
+                animation: morph 10s infinite;
             }
             .bubble2 {
                 width: 120px;
                 height: 80px;
-                background-color: transparent;
+                background-color: $accentTwo;
                 border: 3px solid $accentTwo;
                 border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
                 top: 5vh;
@@ -52,7 +54,7 @@ main {
             .bubble3 {
                 width: 200px;
                 height: 120px;
-                background-color: transparent;
+                background-color: $accentTwo;
                 border: 3px solid $accentTwo;
                 border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
                 top: 35vh;
@@ -62,7 +64,7 @@ main {
             .bubble4 {
                 width: 120px;
                 height: 120px;
-                background-color: transparent;
+                background-color: $accentTwo;
                 border: 3px solid $accentTwo;
                 border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
                 top: 20vh;
@@ -72,7 +74,7 @@ main {
             .bubble5 {
                 width: 240px;
                 height: 160px;
-                background-color: transparent;
+                background-color: $accentTwo;
                 border: 3px solid $accentTwo;
                 border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
                 top: 48vh;
@@ -82,7 +84,7 @@ main {
             .bubble6 {
                 width: 120px;
                 height: 80px;
-                background-color: transparent;
+                background-color: $accentTwo;
                 border: 3px solid $accentTwo;
                 border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
                 top: 15vh;
@@ -92,7 +94,7 @@ main {
             .bubble7 {
                 width: 160px;
                 height: 180px;
-                background-color: transparent;
+                background-color: $accentTwo;
                 border: 3px solid $accentTwo;
                 border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
                 top: 60vh;
@@ -102,7 +104,7 @@ main {
             .bubble8 {
                 width: 240px;
                 height: 140px;
-                background-color: transparent;
+                background-color: $accentTwo;
                 border: 3px solid $accentTwo;
                 border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
                 top: 75vh;
