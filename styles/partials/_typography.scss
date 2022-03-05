@@ -21,6 +21,10 @@ h2 {
     top: 20px;
 }
 h3 {
+    &.greeting {
+        font-size: 4rem;
+        font-family: 'Bad Script', cursive;
+    }
     &.intro {
         font-size: 3rem;
         font-weight: 300;

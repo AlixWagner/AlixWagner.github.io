@@ -286,6 +286,10 @@ h2 {
   top: 20px;
 }
 
+h3.greeting {
+  font-size: 4rem;
+  font-family: "Bad Script", cursive;
+}
 h3.intro {
   font-size: 3rem;
   font-weight: 300;
@@ -902,6 +906,26 @@ section .flexContainer {
           transform: rotateY(180deg);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+}
+
+footer .contact {
+  margin: none;
+}
+footer .contact .flexContainer {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .contact .flexContainer h2 {
+  margin-left: 40px;
+}
+footer .contact .flexContainer .formContainer {
+  width: 50%;
+}
+footer .contact .flexContainer .imgContainer {
+  width: 40%;
+  margin-right: -5%;
 }
 
 html {

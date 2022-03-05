@@ -1,5 +1,19 @@
 footer {
     .contact {
-        
+        margin: none;
+        .flexContainer {
+            padding: 40px 0;
+            display: flex;
+            h2 {
+                margin-left: 40px;
+            }
+            .formContainer {
+                width: 50%;
+            }
+            .imgContainer {
+                width: 40%;
+                margin-right: -5%;
+            }
+        }
     }
 }
