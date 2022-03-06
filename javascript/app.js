@@ -71,14 +71,12 @@ portfolio.menu.addEventListener("click", portfolio.toggleMenu);
 
 
 portfolio.form.addEventListener("submit", function (e) {
+    console.log(e)
     e.preventDefault();
     const userName = portfolio.formC.value;
     const insertName = document.querySelector(".insertName");
     insertName.textContent = userName;
     setTimeout(function() {
-        portfolio.formA.value = "";
-        portfolio.formB.value = "";
-        portfolio.formC.value = "";
         portfolio.fadeIn(portfolio.submitMessage, 10);
-    }, 100)
+    }, 100);
 })
