@@ -78,11 +78,13 @@ portfolio.form.addEventListener("submit", function (e) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
     })
-        .then(() => console.log("Form successfully submitted"))
+        .then(() => {
+            portfolio.formA.value = "";
+            portfolio.formB.value = "";
+            portfolio.formC.value = "";
+        })
     const userName = portfolio.formC.value;
     const insertName = document.querySelector(".insertName");
     insertName.textContent = userName;
-    setTimeout(function() {
-        portfolio.fadeIn(portfolio.submitMessage, 10);
-    }, 100);
+    portfolio.fadeIn(portfolio.submitMessage, 5);
 })

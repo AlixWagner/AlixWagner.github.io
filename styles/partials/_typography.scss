@@ -19,6 +19,14 @@ h2 {
     position: absolute;
     font-size: 1.8rem;
     top: 20px;
+    span {
+        display: inline-block;
+        font-family: $bodyFont;
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: $darkQuaternary;
+        padding-left: 10px;
+    }
 }
 h3 {
     &.greeting {

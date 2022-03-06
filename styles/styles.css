@@ -285,6 +285,14 @@ h2 {
   font-size: 1.8rem;
   top: 20px;
 }
+h2 span {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #70767b;
+  padding-left: 10px;
+}
 
 h3.greeting {
   font-size: 4rem;
@@ -451,61 +459,6 @@ main .stickyBackground .wrapper .bubble3 {
   right: -3%;
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
-}
-main .stickyBackground .wrapper .bubble4 {
-  width: 120px;
-  height: 120px;
-  background-color: #d197b2;
-  border: 3px solid #d197b2;
-  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-  top: 20vh;
-  left: -5%;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-}
-main .stickyBackground .wrapper .bubble5 {
-  width: 240px;
-  height: 160px;
-  background-color: #d197b2;
-  border: 3px solid #d197b2;
-  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-  top: 48vh;
-  left: 40%;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-}
-main .stickyBackground .wrapper .bubble6 {
-  width: 120px;
-  height: 80px;
-  background-color: #d197b2;
-  border: 3px solid #d197b2;
-  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-  top: 15vh;
-  left: 50%;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-}
-main .stickyBackground .wrapper .bubble7 {
-  width: 160px;
-  height: 180px;
-  background-color: #d197b2;
-  border: 3px solid #d197b2;
-  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-  top: 60vh;
-  left: -5%;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-}
-main .stickyBackground .wrapper .bubble8 {
-  width: 240px;
-  height: 140px;
-  background-color: #d197b2;
-  border: 3px solid #d197b2;
-  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-  top: 75vh;
-  right: 5%;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
 }
 
 header {
@@ -900,6 +853,44 @@ section .flexContainer {
   -webkit-box-shadow: -2px -2px 0 #484d50;
           box-shadow: -2px -2px 0 #484d50;
 }
+.skills .wrapper .flexContainer .skillsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.skills .wrapper .flexContainer .skillsList li {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(25% - 20px);
+}
+.skills .wrapper .flexContainer .skillsList li .skill {
+  font-size: 3rem;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.skills .wrapper .flexContainer .skillsList li p {
+  margin-top: -20px;
+  font-size: 0.9rem;
+  color: #70767b;
+  text-align: center;
+}
+.skills .wrapper .flexContainer .skillsList li:hover .skill {
+  color: #9ac2c9;
+}
 
 .contact {
   margin-bottom: 40px;
@@ -1085,7 +1076,7 @@ section .flexContainer {
 }
 .contact .flexContainer .footerSocials .socialsList .emailContainer .email {
   font-size: 0.7rem;
-  color: #7b8185;
+  color: #70767b;
   text-decoration: underline;
   -webkit-text-decoration-color: #2f3335;
           text-decoration-color: #2f3335;

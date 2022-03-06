@@ -61,56 +61,6 @@ main {
                 right: -3%;
                 transform: rotate(5deg);
             }
-            .bubble4 {
-                width: 120px;
-                height: 120px;
-                background-color: $accentTwo;
-                border: 3px solid $accentTwo;
-                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-                top: 20vh;
-                left: -5%;
-                transform: rotate(30deg);
-            }
-            .bubble5 {
-                width: 240px;
-                height: 160px;
-                background-color: $accentTwo;
-                border: 3px solid $accentTwo;
-                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-                top: 48vh;
-                left: 40%;
-                transform: rotate(-20deg);
-            }
-            .bubble6 {
-                width: 120px;
-                height: 80px;
-                background-color: $accentTwo;
-                border: 3px solid $accentTwo;
-                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-                top: 15vh;
-                left: 50%;
-                transform: rotate(10deg);
-            }
-            .bubble7 {
-                width: 160px;
-                height: 180px;
-                background-color: $accentTwo;
-                border: 3px solid $accentTwo;
-                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-                top: 60vh;
-                left: -5%;
-                transform: rotate(-10deg);
-            }
-            .bubble8 {
-                width: 240px;
-                height: 140px;
-                background-color: $accentTwo;
-                border: 3px solid $accentTwo;
-                border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-                top: 75vh;
-                right: 5%;
-                transform: rotate(10deg);
-            }
         }
     }
 }
