@@ -71,8 +71,14 @@ portfolio.menu.addEventListener("click", portfolio.toggleMenu);
 
 
 portfolio.form.addEventListener("submit", function (e) {
-    console.log(e)
     e.preventDefault();
+    let formData = new FormData(portfolio.form);
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+    })
+        .then(() => console.log("Form successfully submitted"))
     const userName = portfolio.formC.value;
     const insertName = document.querySelector(".insertName");
     insertName.textContent = userName;
