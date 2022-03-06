@@ -70,6 +70,7 @@ section {
     margin-top: -40px;
     .flexContainer {
         background-color: $darkSecondary;
+        box-shadow:  -2px -2px 0 $darkTertiary;
         padding: 40px 40px 20px;
         border-radius: 16px;
         display: flex;
@@ -79,23 +80,26 @@ section {
             width: calc(50% - 20px);
             form {
                 margin-top: 30px;
+                margin-bottom: 20px;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+                position: relative;
                 .firstLine {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
+                    opacity:1;
                     .formSection {
                         width: calc(50% - 10px);
                         input {
                             border-radius: 16px;
                             width: 100%;
-                            border: 3px solid $accentOne;
-                            padding: 15px 10px 15px 40px;
+                            border: 3px solid $darkTertiary;
+                            padding: 15px 10px 15px 30px;
                             &:focus,
                             &:active {
-                                border: 3px solid $accentTwo;
+                                border: 3px solid $accentOne;
                             }
                         }
                     }
@@ -103,16 +107,17 @@ section {
                 .userComment {
                     margin: 20px 0;
                     width: 100%;
+                    opacity: 1;
                     textarea {
                         border-radius: 16px;
                         width: 100%;
-                        padding: 20px 40px;
+                        padding: 20px 30px;
                         resize: none;
-                        border: 3px solid $accentOne;
+                        border: 3px solid $darkTertiary;
                         height: 280px;
                         &:focus,
                         &:active {
-                            border: 3px solid $accentTwo;
+                            border: 3px solid $accentOne;
                         }
                     }
                 }
@@ -124,6 +129,7 @@ section {
                     align-self: flex-end;
                     padding: 13px 20px;
                     width: 200px;
+                    opacity:1;
                     &::before {
                         content: "";
                         z-index: 15;
@@ -159,7 +165,22 @@ section {
                         padding: none;
                     }
                 }
-                
+                .messageSent {
+                    display: none;
+                    position: absolute;
+                    top: -1%;
+                    left: -1%;
+                    z-index: 30;
+                    width: 102%;
+                    height: 102%;
+                    background-color: $darkPrimary;
+                    box-shadow:  2px 2px 0 $darkTertiary;
+                    padding: 40px;
+                    border-radius: 16px;
+                    span {
+                        color: $accentTwo
+                    }
+                }
             }
         }
         .footerSocials {
@@ -169,10 +190,48 @@ section {
             .imgContainer {
                 width: 68%;
                 margin-left: 5%;
-                margin-right: -8%;
+                margin-right: -12%;
             }
             .socialsList {
-                align-self: center;
+                padding-top: 15%;
+                align-self: flex-start;
+                li {
+                    margin: 20px 0;
+                    transition: 0.4s;
+                    a {
+                        font-size: 0.8rem;
+                        color: $darkTertiary;
+                        transition: 0.5s;
+                        .fa-github-square, 
+                        .fa-linkedin {
+                            color: $white;
+                            font-size: 1.2rem;
+                        }
+                    }
+                    &:hover,
+                    &:focus-within {
+                        a {
+                            color: $accentOne;
+                        }
+                    }
+                }
+                .emailContainer {
+                    h4 {
+                        margin-bottom: 10px;
+                    }
+                    .email {
+                        font-size: 0.7rem;
+                        color: $darkQuaternary;
+                        text-decoration: underline;
+                        text-decoration-color: $darkSecondary;
+                        transition: 0.5s;
+                        &:hover,
+                        &:focus {
+                            color: $accentOne;
+                            text-decoration-color: $accentOne;
+                        }
+                    }
+                }
             }
         }
     }

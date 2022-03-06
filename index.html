@@ -16,41 +16,24 @@
 </head>
 <body>
     <header id="home">
-        <div class="wrapper">
-            <nav class="mainNav">
-                <a class="logo" href="./index.html">
-                    <p class="sr-only">Home Page</p>
-                    <img src="./styles/assets/AlixWagnerLogo.png" alt="Alix Wagner's logo image">
-                </a>
-                <ul class="mainNavList">
-                    <li>
-                        <a class="nav aboutLink" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="nav projectLink" href="#projects">Projects</a>
-                    </li>
-                    <li >
-                        <a class="nav contactLink" href="#contact">Contact</a>
-                    </li>
+        <nav class="mainNav">
+            <div class="headerNav">
+                <button aria-label="show or hide navigation menu" class="menuIcon   ">
+                    <div class="hamburgerMenuIcon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <ul class="mainMenu">
+                    <li><a class="navLink" href="#about">About</a></li>
+                    <li><a class="navLink" href="#projects">Projects</a></li>
+                    <li><a class="navLink" href="#contact">Contact</a></li>
                 </ul>
-                <div class="headerNav">
-                    <input type="checkbox" id="toggle" name="toggle" />
-                    <label for="toggle">
-                        <div class="hamburgerMenuIcon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </label>
-                    <!-- <ul class="mainMenu">
-                        <li><a class="navLink" href="./index.html">Home</a></li>
-                        <li><a class="navLink" href="#">About</a></li>
-                        <li><a class="navLink" href="./blog.html">Blog</a></li>
-                        <li><a class="navLink" href="./contact.html">Contact</a></li>
-                    </ul> -->
-                </div>
-            </nav>
+            </div>
+        </nav>
+        <div class="wrapper">
             <div class="heroHeader">
                 <div class="imgContainer">
                     <img src="./styles/assets/PortfolioPortrait.png"
@@ -266,6 +249,9 @@
                     <div class="formContainer">
                         <h3 class="greeting">Say Hello!</h3>
                         <form method="POST" name="contactForm" class="contactForm" netlify>
+                            <div class="messageSent">
+                                <p>Hi <span class="insertName">Alix</span>,<br><br>Thanks for reaching out!<br>I'll get back to you via e-mail.<br><br>Have a great day!</p>
+                            </div>
                             <div class="firstLine">
                                 <div class="formSection userName">
                                     <label for="userName" class="sr-only">Name</label>
@@ -293,38 +279,36 @@
                             <img src="./styles/assets/PortfolioFooterImage.png"
                                 alt="digital drawing of a person sitting casually on the ground">
                         </div>
-                        <ul class="socialsList">
-                            <li>
-                                <a href="#">
-                                    <i class="GET FROM FONTAWESOME"></i>
-                                    text here
+                        <div class="socialsList">
+                            <h4>Find Me Here:</h4>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/in/alixwagner">
+                                        <i class="fab fa-linkedin"></i>
+                                        /AlixWagner
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://github.com/AlixWagner">
+                                        <i class="fab fa-github-square"></i>
+                                        /AlixWagner
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="emailContainer">
+                                <h4>Or E-Mail Me:</h4>
+                                <a class="email" href="mailto:alix@alixwagner.com">
+                                    Alix@AlixWagner.com
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="GET FROM FONTAWESOME"></i>
-                                    text here
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="GET FROM FONTAWESOME"></i>
-                                    text here
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="GET FROM FONTAWESOME"></i>
-                                    text here
-                                </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
+        
     </footer>
 
     <script src="./javascript/app.js"></script>
