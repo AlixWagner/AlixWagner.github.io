@@ -29,6 +29,9 @@ h2 {
     }
 }
 h3 {
+    &.card {
+        font-size: 2rem;
+    }
     &.greeting {
         font-size: 4rem;
         font-family: 'Bad Script', cursive;
@@ -44,6 +47,7 @@ p {
     max-width: 70ch;
     font-size: 1rem;
     font-weight: 300;
+    line-height: 1.4rem;
     letter-spacing: 0.05rem;
     padding: 30px 0 20px;
     &.jobTitle {
@@ -52,6 +56,17 @@ p {
         text-align: right;
         padding: 0;
     }
+    &.appLanguages {
+        font-size: 0.9rem;
+        margin-top: -15px;
+    }
+    &.appDescription {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+}
+li p {
+    line-height: 1rem;
 }
 
 a {

@@ -294,6 +294,9 @@ h2 span {
   padding-left: 10px;
 }
 
+h3.card {
+  font-size: 2rem;
+}
 h3.greeting {
   font-size: 4rem;
   font-family: "Bad Script", cursive;
@@ -308,6 +311,7 @@ p {
   max-width: 70ch;
   font-size: 1rem;
   font-weight: 300;
+  line-height: 1.4rem;
   letter-spacing: 0.05rem;
   padding: 30px 0 20px;
 }
@@ -316,6 +320,18 @@ p.jobTitle {
   line-height: 0.8rem;
   text-align: right;
   padding: 0;
+}
+p.appLanguages {
+  font-size: 0.9rem;
+  margin-top: -15px;
+}
+p.appDescription {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+}
+
+li p {
+  line-height: 1rem;
 }
 
 a {
@@ -677,6 +693,9 @@ header .scrollDown:hover .fa-chevron-down, header .scrollDown:focus .fa-chevron-
   border: none;
   background-color: transparent;
 }
+.headerNav .menuIcon:hover .hamburgerMenuIcon span, .headerNav .menuIcon:focus .hamburgerMenuIcon span {
+  background: #d197b2;
+}
 .headerNav .menuIcon .hamburgerMenuIcon {
   width: 60px;
   height: 35px;
@@ -772,6 +791,15 @@ header .scrollDown:hover .fa-chevron-down, header .scrollDown:focus .fa-chevron-
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #2a2c2e;
+          text-decoration-color: #2a2c2e;
+}
+.headerNav ul a:hover, .headerNav ul a:focus {
+  color: #ece1ad;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #ece1ad;
+          text-decoration-color: #ece1ad;
 }
 .headerNav ul.open {
   opacity: 1;
@@ -1169,6 +1197,73 @@ section .flexContainer {
   text-align: center;
   right: 0;
   left: 0;
+}
+.projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+  margin: 20px auto;
+}
+.projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a {
+  font-size: 1.1rem;
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+  position: relative;
+  width: calc(50% - 20px);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 50%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 30% 30% 40% 40%/70% 40% 90% 60%;
+  top: 50%;
+  left: 70%;
+  margin-left: -35%;
+  z-index: -5;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a:hover::before, .projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a:focus::before {
+  top: -25%;
+  left: 50%;
+  width: 70%;
+  height: 150%;
+  background-color: #9ac2c9;
+  border: 2px solid #9ac2c9;
+  border-radius: 80% 20% 60% 20%/40% 70% 30% 40%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a.repoSite::before {
+  border-radius: 30% 30% 40% 40%/70% 40% 90% 60%;
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+}
+.projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a.repoSite:hover::before, .projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a.repoSite:focus::before {
+  width: 90%;
+  height: 150%;
+  left: 40%;
+  background-color: #d197b2;
+  border: 2px solid #d197b2;
+  border-radius: 80% 20% 60% 20%/40% 70% 30% 40%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a:hover, .projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a:focus {
+  text-decoration: none;
+  color: #2a2c2e;
 }
 .projects .flexContainer .projectsList .projectCard:hover, .projects .flexContainer .projectsList .projectCard:focus {
   -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
