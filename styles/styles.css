@@ -1789,6 +1789,10 @@ form .messageSent span {
     padding-bottom: 25px;
     padding: 10px;
   }
+  .contact .wrapper .flexContainer .formContainer .buttonContainer button {
+    padding-right: 10px;
+    font-size: 0.9rem;
+  }
   .contact .wrapper .flexContainer .footerSocials {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;

@@ -496,6 +496,14 @@
                 box-shadow: none;
                 padding-bottom: 25px;
                 padding: 10px;
+                .formContainer {
+                    .buttonContainer {
+                        button {
+                            padding-right: 10px;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
                 .footerSocials {
                     flex-direction: row-reverse;
                     .imgContainer {
