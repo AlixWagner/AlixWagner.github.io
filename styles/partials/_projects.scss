@@ -104,8 +104,8 @@
                                     width: 90%;
                                     height: 150%;
                                     left: 40%;
-                                    background-color: $accentTwo;
-                                    border: 2px solid $accentTwo;
+                                    background-color: $accentThree;
+                                    border: 2px solid $accentThree;
                                     border-radius: 80% 20% 60% 20%/40% 70% 30% 40%;
                                     transform: rotate(0deg);
                                 }
@@ -113,7 +113,7 @@
                             &:hover,
                             &:focus {
                                 text-decoration: none;
-                                color: $darkPrimary;
+                                color: $darkSecondary;
                             }
                         }
                     }
@@ -121,7 +121,7 @@
                 &:hover,
                 &:focus {
                     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
-                    background: #2f333596;
+                    background: #54595c60;
                 }
             }
         }
