@@ -23,7 +23,7 @@ header {
             min-width: 240px;
             margin-top: 10vh;
             position: relative;
-            bottom: 40%;
+            top: -40%;
             left: 30px;
             &::before {
                 content: "";
@@ -108,7 +108,7 @@ header {
                 border: 2px solid $white;
                 transform: rotate(-5deg);
                 top: 50%;
-                left: 30%;
+                left: 32%;
                 border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
             }
             .stylingElement {
