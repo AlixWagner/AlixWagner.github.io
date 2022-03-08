@@ -329,7 +329,7 @@ p.jobTitle {
 p.appLanguages {
   font-size: 0.9rem;
   margin-top: -15px;
-  color: #70767b;
+  color: #ecf1f3;
 }
 p.appDescription {
   padding: 10px 0px;
@@ -392,43 +392,39 @@ a.socialLink {
   }
 }
 @-webkit-keyframes morph {
-  0% {
-    border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-  }
   25% {
-    -webkit-transform: translateY(2px) rotate(10deg);
-            transform: translateY(2px) rotate(10deg);
+    -webkit-transform: translateY(2px) rotate(1deg);
+            transform: translateY(2px) rotate(1deg);
   }
   50% {
-    border-radius: 40% 40% 80% 60%/70% 40% 30% 60%;
+    border-radius: 80% 60% 70% 40%/70% 80% 50% 60%;
     -webkit-transform: translateY(0px) rotate(0deg);
             transform: translateY(0px) rotate(0deg);
   }
   75% {
-    -webkit-transform: translateY(2px) rotate(10deg);
-            transform: translateY(2px) rotate(10deg);
+    -webkit-transform: translateY(2px) rotate(1deg);
+            transform: translateY(2px) rotate(1deg);
   }
 }
 @keyframes morph {
-  0% {
-    border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
-  }
   25% {
-    -webkit-transform: translateY(2px) rotate(10deg);
-            transform: translateY(2px) rotate(10deg);
+    -webkit-transform: translateY(2px) rotate(1deg);
+            transform: translateY(2px) rotate(1deg);
   }
   50% {
-    border-radius: 40% 40% 80% 60%/70% 40% 30% 60%;
+    border-radius: 80% 60% 70% 40%/70% 80% 50% 60%;
     -webkit-transform: translateY(0px) rotate(0deg);
             transform: translateY(0px) rotate(0deg);
   }
   75% {
-    -webkit-transform: translateY(2px) rotate(10deg);
-            transform: translateY(2px) rotate(10deg);
+    -webkit-transform: translateY(2px) rotate(1deg);
+            transform: translateY(2px) rotate(1deg);
   }
 }
 main {
   position: relative;
+  overflow: clip;
+  padding-bottom: 40px;
 }
 main .stickyScroll {
   position: sticky;
@@ -477,26 +473,26 @@ main .stickyBackground .wrapper .floatingBubble {
           animation: morph 10s infinite;
 }
 main .stickyBackground .wrapper .bubble2 {
-  width: 120px;
-  height: 80px;
+  width: 80%;
+  height: 500px;
   background-color: #d197b2;
   border: 3px solid #d197b2;
-  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  border-radius: 40% 30% 30% 40%/70% 40% 90% 60%;
   top: 5vh;
-  right: -5%;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  right: -35%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 main .stickyBackground .wrapper .bubble3 {
-  width: 200px;
-  height: 120px;
-  background-color: #d197b2;
-  border: 3px solid #d197b2;
-  border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+  width: 80%;
+  height: 600px;
+  background-color: #9ac2c9;
+  border: 3px solid #9ac2c9;
+  border-radius: 50% 70% 50% 40%/70% 60% 70% 60%;
   top: 35vh;
-  right: -3%;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+  left: -35%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 header {
@@ -944,7 +940,7 @@ section .flexContainer {
 }
 
 .contact {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   margin-top: -40px;
 }
 .contact .flexContainer {
@@ -1295,20 +1291,20 @@ form .messageSent span {
   width: 90%;
   height: 150%;
   left: 40%;
-  background-color: #d197b2;
-  border: 2px solid #d197b2;
+  background-color: #ece1ad;
+  border: 2px solid #ece1ad;
   border-radius: 80% 20% 60% 20%/40% 70% 30% 40%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 .projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a:hover, .projects .flexContainer .projectsList .projectCard .cardBack .buttonContainer a:focus {
   text-decoration: none;
-  color: #2a2c2e;
+  color: #2f3335;
 }
 .projects .flexContainer .projectsList .projectCard:hover, .projects .flexContainer .projectsList .projectCard:focus {
   -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
           box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
-  background: #2f333596;
+  background: #54595c60;
 }
 .projects .flexContainer .projectCard.flip {
   -webkit-transform: rotateY(180deg);
@@ -1449,6 +1445,10 @@ form .messageSent span {
     display: none;
   }
 
+  main .stickyBackground .wrapper .bubble3 {
+    width: 90%;
+  }
+
   .about .wrapper .flexContainer {
     padding-top: 30px;
   }
@@ -1551,6 +1551,16 @@ form .messageSent span {
   header .heroHeader .bubble1 {
     left: auto;
     right: 60%;
+  }
+
+  main .stickyBackground .wrapper .bubble2 {
+    width: 90%;
+    height: 400px;
+  }
+  main .stickyBackground .wrapper .bubble3 {
+    top: 50vh;
+    width: 90%;
+    height: 400px;
   }
 
   .about .wrapper .flexContainer .buttonContainer::before {
@@ -1697,6 +1707,10 @@ form .messageSent span {
     margin-left: 5px;
   }
   header .heroHeader .bubble1 {
+    display: none;
+  }
+
+  main .stickyBackground .wrapper .floatingBubble {
     display: none;
   }
 

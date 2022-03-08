@@ -142,6 +142,15 @@
         }
     }
     // SECTION ADJUSTMENTS ---
+    main {
+        .stickyBackground {
+            .wrapper {
+                .bubble3 {
+                    width: 90%; 
+                }
+            }
+        }
+    }
     .about {
         .wrapper {
             .flexContainer {
@@ -254,6 +263,21 @@
         }
     }
     // SECTION ADJUSTMENTS --- 
+    main {
+        .stickyBackground {
+            .wrapper {
+                .bubble2 {
+                    width: 90%;
+                    height: 400px;
+                }
+                .bubble3 {
+                    top: 50vh;
+                    width: 90%; 
+                    height: 400px;
+                }
+            }
+        }
+    }
     .about {
         .wrapper {
             .flexContainer {
@@ -411,6 +435,15 @@
         }
     }
     // SECTION ADJUSTMENTS ---
+    main {
+        .stickyBackground {
+            .wrapper {
+                .floatingBubble {
+                    display: none;
+                }
+            }
+        }
+    }
     section {
         .flexContainer {
             padding: 10px;
