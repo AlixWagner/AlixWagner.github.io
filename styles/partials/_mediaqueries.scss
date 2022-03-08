@@ -61,6 +61,31 @@
             }
         }
     }
+    // SECTION ADJUSTMENTS --- 
+    .contact {
+        .flexContainer {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            .formContainer {
+                width: 70%;
+            }
+            .footerSocials {
+                flex-direction: column-reverse;
+                .imgContainer {
+                    width: 100%;
+                    margin-top: -20px;
+                }
+                .socialsList {
+                    padding-top: 0;
+                    width: 200%;
+                    li {
+                        display: flex;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 900px) {
@@ -158,6 +183,33 @@
             }
         }
     }
+    .contact {
+        .flexContainer {
+            .formContainer {
+                width: 70%;
+                form {
+                    position: relative;
+                    z-index: 10;
+                }
+            }
+            .footerSocials {
+                .imgContainer {
+                    position: relative;
+                    left: 15%;
+                    width: 130%;
+                    margin-top: 20px;
+                }
+                .socialsList {
+                    padding-top: 0;
+                    width: 200%;
+                    li {
+                        display: flex;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -220,7 +272,6 @@
                     &:focus-within::before {
                         border: 3px solid $accentOne;
                         border-right: 3px solid $accentOne;
-                        // border-radius: 80% 30% 30% 30%/40% 40% 90% 80%;
                         background-color: $accentOne;
                     }
                 }
@@ -266,6 +317,55 @@
                 .projectsList {
                     .projectCard {
                         flex-basis: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        .flexContainer {
+            flex-direction: column;
+            .formContainer {
+                width: 100%;
+                form {
+                    .buttonContainer {
+                        &::before {
+                            right: 10px;
+                            width: 185px;
+                            border: 3px solid $accentTwo;
+                            border-right: 3px solid $accentTwo;
+                            background-color: $accentTwo;
+                        }
+                        button {
+                            color: $darkSecondary;
+                        }
+                        &:hover::before,
+                        &:focus-within::before {
+                            background-color: $accentOne;
+                            border: 3px solid $accentOne;
+                            border-right: 3px solid $accentOne;
+                        }
+                    }
+                }
+            }
+            .footerSocials {
+                flex-direction: row;
+                width: 100%;
+                margin-top: -80px;
+                .imgContainer {
+                    position: relative;
+                    left: 0;
+                    width: 70%;
+                    margin-top: 20px;
+                    margin-left: -20px;
+                }
+                .socialsList {
+                    margin-top: 25%;
+                    padding-top: 0;
+                    width: 50%;
+                    li {
+                        display: flex;
+                        margin: 10px 0;
                     }
                 }
             }
@@ -364,16 +464,63 @@
                 h2 {
                     padding-left: 18%;
                 }
+                .projectsList {
+                    .projectCard {
+                        .cardBack {
+                            padding: 20px 15px 15px;
+                            h3 {
+                                font-size: 1.1rem;
+                            }
+                            .appLanguages {
+                                font-size: 0.8rem;
+                            }
+                            .appDescription {
+                                padding: 0;
+                                font-size: 0.8rem;
+                                line-height: 0.8rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
     .contact{
+        overflow: hidden;
         background-image: linear-gradient($darkPrimary,  $darkSecondary, $darkSecondary, $darkSecondary, $darkSecondary, $darkSecondary, $darkSecondary, $darkPrimary, $darkPrimary, $darkPrimary) ;
         .wrapper {
+            padding-top: 20px;
             .flexContainer {
+                justify-content: space-between;
                 background-color: transparent;
                 box-shadow: none;
                 padding-bottom: 25px;
+                padding: 10px;
+                .footerSocials {
+                    flex-direction: row-reverse;
+                    .imgContainer {
+                        margin-top: 60px;
+                        margin-right: -80px;
+                    }
+                    .socialsList {
+                        margin-top: 170px;
+                        width: 60%;
+                        h4 {
+                            font-size: 0.8rem;
+                        }
+                        .fab {
+                            font-size: 1rem;
+                        }
+                        .emailContainer {
+                            h4 {
+                                margin-bottom: -2px;
+                            }
+                            a {
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

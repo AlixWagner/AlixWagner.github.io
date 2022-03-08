@@ -1352,6 +1352,39 @@ form .messageSent span {
   .projects .flexContainer .projectsList .projectCard .cardFront {
     padding: 10px 10px 110px 10px;
   }
+
+  .contact .flexContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contact .flexContainer .formContainer {
+    width: 70%;
+  }
+  .contact .flexContainer .footerSocials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact .flexContainer .footerSocials .imgContainer {
+    width: 100%;
+    margin-top: -20px;
+  }
+  .contact .flexContainer .footerSocials .socialsList {
+    padding-top: 0;
+    width: 200%;
+  }
+  .contact .flexContainer .footerSocials .socialsList li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0;
+  }
 }
 @media (max-width: 900px) {
   h2 {
@@ -1445,6 +1478,30 @@ form .messageSent span {
   }
   .projects .flexContainer .projectsList .projectCard .cardFront {
     padding: 30px 30px 110px 30px;
+  }
+
+  .contact .flexContainer .formContainer {
+    width: 70%;
+  }
+  .contact .flexContainer .formContainer form {
+    position: relative;
+    z-index: 10;
+  }
+  .contact .flexContainer .footerSocials .imgContainer {
+    position: relative;
+    left: 15%;
+    width: 130%;
+    margin-top: 20px;
+  }
+  .contact .flexContainer .footerSocials .socialsList {
+    padding-top: 0;
+    width: 200%;
+  }
+  .contact .flexContainer .footerSocials .socialsList li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0;
   }
 }
 @media (max-width: 700px) {
@@ -1543,6 +1600,57 @@ form .messageSent span {
   .projects .wrapper .flexContainer .projectsList .projectCard {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
+  }
+
+  .contact .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .flexContainer .formContainer {
+    width: 100%;
+  }
+  .contact .flexContainer .formContainer form .buttonContainer::before {
+    right: 10px;
+    width: 185px;
+    border: 3px solid #d197b2;
+    border-right: 3px solid #d197b2;
+    background-color: #d197b2;
+  }
+  .contact .flexContainer .formContainer form .buttonContainer button {
+    color: #2f3335;
+  }
+  .contact .flexContainer .formContainer form .buttonContainer:hover::before, .contact .flexContainer .formContainer form .buttonContainer:focus-within::before {
+    background-color: #9ac2c9;
+    border: 3px solid #9ac2c9;
+    border-right: 3px solid #9ac2c9;
+  }
+  .contact .flexContainer .footerSocials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    margin-top: -80px;
+  }
+  .contact .flexContainer .footerSocials .imgContainer {
+    position: relative;
+    left: 0;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: -20px;
+  }
+  .contact .flexContainer .footerSocials .socialsList {
+    margin-top: 25%;
+    padding-top: 0;
+    width: 50%;
+  }
+  .contact .flexContainer .footerSocials .socialsList li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0;
   }
 }
 @media (max-width: 500px) {
@@ -1648,15 +1756,63 @@ form .messageSent span {
   .projects .wrapper .flexContainer h2 {
     padding-left: 18%;
   }
+  .projects .wrapper .flexContainer .projectsList .projectCard .cardBack {
+    padding: 20px 15px 15px;
+  }
+  .projects .wrapper .flexContainer .projectsList .projectCard .cardBack h3 {
+    font-size: 1.1rem;
+  }
+  .projects .wrapper .flexContainer .projectsList .projectCard .cardBack .appLanguages {
+    font-size: 0.8rem;
+  }
+  .projects .wrapper .flexContainer .projectsList .projectCard .cardBack .appDescription {
+    padding: 0;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
 
   .contact {
+    overflow: hidden;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#2a2c2e), color-stop(#2f3335), color-stop(#2f3335), color-stop(#2f3335), color-stop(#2f3335), color-stop(#2f3335), color-stop(#2f3335), color-stop(#2a2c2e), color-stop(#2a2c2e), to(#2a2c2e));
     background-image: linear-gradient(#2a2c2e, #2f3335, #2f3335, #2f3335, #2f3335, #2f3335, #2f3335, #2a2c2e, #2a2c2e, #2a2c2e);
   }
+  .contact .wrapper {
+    padding-top: 20px;
+  }
   .contact .wrapper .flexContainer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
     padding-bottom: 25px;
+    padding: 10px;
+  }
+  .contact .wrapper .flexContainer .footerSocials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .contact .wrapper .flexContainer .footerSocials .imgContainer {
+    margin-top: 60px;
+    margin-right: -80px;
+  }
+  .contact .wrapper .flexContainer .footerSocials .socialsList {
+    margin-top: 170px;
+    width: 60%;
+  }
+  .contact .wrapper .flexContainer .footerSocials .socialsList h4 {
+    font-size: 0.8rem;
+  }
+  .contact .wrapper .flexContainer .footerSocials .socialsList .fab {
+    font-size: 1rem;
+  }
+  .contact .wrapper .flexContainer .footerSocials .socialsList .emailContainer h4 {
+    margin-bottom: -2px;
+  }
+  .contact .wrapper .flexContainer .footerSocials .socialsList .emailContainer a {
+    font-size: 0.6rem;
   }
 }
