@@ -4,14 +4,300 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mrs+Sheppards&family=Poppins:wght@200;300;400;600&family=Urbanist:wght@200;300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <script src="https://kit.fontawesome.com/214b10b636.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css"></style>
     <title>Alix Wagner</title>
 </head>
 <body>
-    <h1>Portfolio Site Coming Soon</h1>
-    <div class="imgContainer">
-        <img src="./styles/assets/PortfolioPortrait.png"
-            alt="digital portrait of a person wearing glasses with their hair up in a messy bun">
-    </div>
+    <header id="home">
+        <nav class="mainNav">
+            <div class="headerNav">
+                <button aria-label="show or hide navigation menu" class="menuIcon">
+                    <!-- credit to Jesse Couch for Hamburger Icon Animations -->
+                    <div class="hamburgerMenuIcon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <ul class="mainMenu">
+                    <li><a class="navLink" href="#about">About</a></li>
+                    <li><a class="navLink" href="#projects">Projects</a></li>
+                    <li><a class="navLink" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="heroHeader">
+                <div class="imgContainer">
+                    <img src="./styles/assets/PortfolioPortrait.png"
+                        alt="A digital drawing of a person wearing glasses, with their hair in a messy bun">
+                    <div class="stylingElement"></div>
+                </div>
+                <div class="textContainer">
+                    <h1>Alix Wagner</h1>
+                    <p class="jobTitle">Web Developer.</p>
+                </div>
+                <div class="floatingBubble bubble1">
+                    <div class="stylingElement"></div>
+                </div>
+            </div>
+        </div>
+        <a tabindex="-1" href="#about" class="scrollDown">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+    <main>
+        <div class="stickyScroll">
+            <div class="wrapper">
+                <a tabindex="-1" href="#home" class="scrollUp">
+                    <i class="fas fa-chevron-up"></i>
+                    Back to Top
+                </a>
+            </div>
+        </div>
+        <!-- <div class="stickyBackground">
+            <div class="wrapper">
+                <div class="floatingBubble bubble2"></div>
+                <div class="floatingBubble bubble3"></div>
+            </div>
+        </div> -->
+        <section class="about" id="about">
+            <div class="wrapper">
+                <div class="flexContainer">
+                    <!-- h2 will be position: absolute; to position above the actual container -->
+                    <h2 class="aboutHeader">About</h2>
+                    <h3 class="intro">Hi, I'm Alix!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis provident officia necessitatibus, officiis id quaerat, doloribus dolorum eligendi ab commodi aut tenetur recusandae ut ad molestias libero, corporis vero quos amet sed. Expedita, voluptate voluptates velit consectetur similique, ex delectus quibusdam modi, nulla sed debitis!</p>
+                    <div class="buttonContainer">
+                        <a class="contactButton" href="#contact">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills">
+            <div class="wrapper">
+                <div class="flexContainer">
+                    <h2>Toolkit <span class="comments">// currently learning Node.JS && Ruby on Rails </span></h2>
+                    <ul class="skillsList">
+                        <li>
+                            <i aria-hidden="true" class="skill fab fa-html5"></i>
+                            <p>HTML5</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill fab fa-css3-alt"></i>
+                            <p>CSS3</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill fab fa-sass"></i>
+                            <p>SCSS</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill devicon-firebase-plain"></i>
+                            <p>Firebase</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill fab fa-js-square"></i>
+                            <p>JavaScript</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill devicon-jquery-plain"></i>
+                            <p>jQuery</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill devicon-react-original"></i>
+                            <p>React</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill fas fa-cogs"></i>
+                            <p>REST APIs</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill fas fa-universal-access"></i>
+                            <p>WCAG<br>Accessibility</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill devicon-github-original"></i>
+                            <p>Version<br>Control</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill fas fa-mobile-alt"></i>
+                            <p>Responsive<br>Design</p>
+                        </li>
+                        <li>
+                            <i aria-hidden="true" class="skill fas fa-cloud"></i>
+                            <p>Adobe<br>Creative Cloud</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="wrapper">
+                <div class="flexContainer">
+                    <h2>Projects <span class="comments">// click on any project for more info</span></h2>
+                    <ul class="projectsList">
+                        <li tabindex="0" aria-label="" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src="./styles/assets/HarperSiteDisplay.png" alt="a rendering of the Harper Blog site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3 class="card">Harper's Blog</h3>
+                                <p class="appLanguages">HTML / SCSS</p>
+                                <p class="appDescription">A full site build using HTML5 and CSS to create a pixel-perfect recreation of a PSD wireframe that is fully accessible, and beautifully responsive down to 320px.</p>
+                                <div class="buttonContainer">
+                                    <a class="liveSite" href="https://harper-blog.netlify.app/" target="_blank">Live</a>
+                                    <a class="repoSite" href="https://github.com/AlixWagner/alix-wagner-project-1" target="_blank">Repo</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src="./styles/assets/CocktailSiteDisplay.png"
+                                        alt="a rendering of the Cocktail Recipe site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3 class="card">Cocktail Connoisseur</h3>
+                                <p class="appLanguages">HTML / SCSS / APIs</p>
+                                <p class="appDescription"> A fully functional, responsive app built using JavaScript and the CocktailDB API. A pair-programming project, this project was built collaboratively making use of Git best practices.</p>
+                                <div class="buttonContainer">
+                                        <a class="liveSite" href="https://cocktail-connoisseur.netlify.app/" target="_blank">Live</a>
+                                        <a class="repoSite" href="https://github.com/AlixWagner/Project2CocktailApp"
+                                            target="_blank">Repo</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src="./styles/assets/CocktailSiteDisplay.png"
+                                        alt="a rendering of the Cocktail Recipe site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3 class="card">Cocktail Connoisseur</h3>
+                                <p class="appLanguages">HTML||SCSS||APIs</p>
+                                <p class="appDescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores
+                                corrupti quia molestiae, recusandae minus cumque dolor ad assumenda numquam
+                                totam quaerat officiis, unde illum beatae similique quae deserunt architecto
+                                praesentium quas nemo ut exercitationem!</p>
+                                <div class="buttonContainer">
+                                    <a class="liveSite" href="https://cocktail-connoisseur.netlify.app/"
+                                        target="_blank">Live</a>
+                                    <a class="repoSite"
+                                        href="https://github.com/AlixWagner/Project2CocktailApp"
+                                        target="_blank">Repo </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0" class="projectCard">
+                            <div class="cardFront">
+                                <div class="imgContainer">
+                                    <img src="./styles/assets/HarperSiteDisplay.png"
+                                        alt="a rendering of the Harper Blog site on a laptop and a mobile phone.">
+                                </div>
+                            </div>
+                            <div class="cardBack">
+                                <h3 class="card">HARPER</h3>
+                                <p class="appLanguages">HTML||SCSS</p>
+                                <p class="appDescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores
+                                corrupti quia molestiae, recusandae minus cumque dolor ad assumenda numquam
+                                totam quaerat officiis, unde illum beatae similique quae deserunt architecto
+                                praesentium quas nemo ut exercitationem!</p>
+                                <div class="buttonContainer">
+                                    <a class="liveSite" href="https://harper-blog.netlify.app/"
+                                        target="_blank">Live</a>
+                                    <a class="repoSite"
+                                        href="https://github.com/AlixWagner/alix-wagner-project-1"
+                                        target="_blank">Repo</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <div class="flexContainer">
+                    <!-- h2 will be position: absolute; to position above the actual container -->
+                    <h2>Contact</h2>
+                    <div class="formContainer">
+                        <p class="greeting">// thanks for checking out my site,<br>feel free to send me a message!</p>
+                        <form method="POST" name="contactForm" class="contactForm" netlify>
+                            <div class="messageSent">
+                                <p>Hi <span class="insertName">Alix</span>,<br><br>Thanks for reaching out!<br>I'll get back to you via e-mail.<br><br>Have a great day!</p>
+                            </div>
+                            <div class="firstLine">
+                                <div class="formSection userName">
+                                    <label for="userName" class="sr-only">Name</label>
+                                    <input placeholder="Name" type="text" id="userName" name="userName"
+                                        required>
+                                </div>
+                                <div class="formSection userEmail">
+                                    <label class="sr-only" for="userEmail">Email</label>
+                                    <input placeholder="Email address" type="email" id="userEmail"
+                                        name="userEmail" required>
+                                </div>
+                            </div>
+                            <div class="userComment">
+                                <label class="sr-only" for="userComment">Message</label>
+                                <textarea placeholder="Want to Grab Coffee?&#10;Want to Chat About Life?&#10;Want to Offer Me a Job?" name="userComment"
+                                    id="userComment" required></textarea>
+                            </div>
+                            <div class="buttonContainer">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="footerSocials">
+                        <div class="imgContainer">
+                            <img src="./styles/assets/PortfolioFooterImage.png"
+                                alt="digital drawing of a person sitting casually on the ground">
+                        </div>
+                        <div class="socialsList">
+                            <h4>Find Me Here:</h4>
+                            <ul>
+                                <li>
+                                    <a class="socialLink" aria-label="link to LinkedIn profile" target="_blank" href="https://www.linkedin.com/in/alixwagner">
+                                        <i aria-hidden="true" class="fab fa-linkedin"></i>
+                                        /AlixWagner
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="socialLink" aria-label="link to GitHub profile" target="_blank" href="https://github.com/AlixWagner">
+                                        <i aria-hidden="true" class="fab fa-github-square"></i>
+                                        /AlixWagner
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="emailContainer">
+                                <h4>Or E-Mail Me:</h4>
+                                <a aria-label="link to send an email" class="email" href="mailto:alix@alixwagner.com">
+                                    Alix@AlixWagner.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+
+    <script src="./javascript/app.js"></script>
 </body>
 </html>

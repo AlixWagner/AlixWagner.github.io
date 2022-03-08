@@ -1,0 +1,102 @@
+html {
+    font-size: 125%;
+    font-family: $bodyFont;
+    color: $white;
+}
+
+h1, h2, h3 {
+    font-family: $headerFont;
+}
+
+h1 {
+    color: $white;
+    font-size: clamp(3.6rem, 16vw, 12rem);
+    line-height: clamp(3.2rem, 15vw, 12rem);
+}
+
+h2 {
+    color: $white;
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: 500;
+    top: 20px;
+    span {
+        display: inline-block;
+        font-family: $bodyFont;
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: $darkQuaternary;
+        padding-left: 10px;
+    }
+}
+h3 {
+    &.card {
+        font-size: 1.8rem;
+    }
+    &.intro {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+        font-weight: 300;
+        line-height: 2rem;
+    }
+}
+
+h4 {
+
+    font-weight: 300;
+}
+
+p {
+    max-width: 70ch;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+    letter-spacing: 0.05rem;
+    padding: 20px 0;
+    &.jobTitle {
+        font-size: clamp(0.9rem, 2.6vw, 1.9rem);
+        line-height: 0.8rem;
+        text-align: right;
+        padding: 0;
+    }
+    &.appLanguages {
+        font-size: 0.9rem;
+        margin-top: -15px;
+        color: $darkQuaternary;
+    }
+    &.appDescription {
+        padding: 10px 0px;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+    &.formText {
+        font-size: 0.9rem;
+        padding: 0;
+        margin-top: 10px;
+        max-width: 36ch;
+    }
+    &.greeting {
+        color: $darkQuaternary;
+        margin-left: 5px;
+        font-weight: 300;
+        padding: 0;
+    }
+}
+li p {
+    line-height: 1rem;
+}
+
+a {
+    color: $white;
+    &.nav {
+        font-size: 1.2rem;
+        text-shadow: 1px 1px $darkPrimary;
+    }
+    &.contactButton {
+        font-size: 1.4rem;
+        font-family: $headerFont;
+        transition: 0.8s;
+    }
+    &.socialLink {
+        font-weight: 300;
+    }
+}

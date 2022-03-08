@@ -1,0 +1,29 @@
+
+// animation for down arrow: 
+@keyframes slowBob {
+    0% {
+        transform: translateY(0) translateX(-50%);
+    }
+    50% {
+        transform: translateY(10px) translateX(-50%);
+    }
+}
+
+// establish animation for morphing blobs:
+@keyframes morph {
+    0% {
+        border-radius: 20% 30% 30% 40%/70% 40% 90% 60%;
+    }
+    25% {
+        transform: translateY(2px) rotate(10deg)
+    }
+    50% {
+        border-radius: 40% 40% 80% 60%/70% 40% 30% 60%;
+        transform: translateY(0px) rotate(0deg)
+    }
+    75% {
+        transform: translateY(2px) rotate(10deg)
+    }
+}
+
+// PLEASE CONSIDER --- stretch goal --- blobs jiggle on click

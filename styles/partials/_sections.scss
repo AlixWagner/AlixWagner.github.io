@@ -1,0 +1,167 @@
+section {
+    padding-top: 70px;
+    position: relative;
+    .flexContainer {
+        padding: 40px;
+        z-index: 10;
+    }
+}
+
+.about {
+    .wrapper {
+        .flexContainer {
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            background-color: $darkSecondary;
+            border-radius: 16px;
+            box-shadow:  -2px -2px 0 $darkTertiary;
+            .buttonContainer {
+                position: relative;
+                align-self: flex-end;
+                padding: 10px 30px;
+                &::before {
+                    content: "";
+                    z-index: 15;
+                    position: absolute;
+                    border: 3px solid $accentOne;
+                    border-right: 3px solid transparent;
+                    border-radius: 50px;
+                    top: 0;
+                    left: 15px;
+                    height: 52px;
+                    width: 52px;
+                    transition: 0.6s;
+                }
+                &:hover::before,
+                &:focus-within::before {
+                    right: 10px;
+                    width: 175px;
+                    border-right: 3px solid $accentOne;
+                    // border-radius: 80% 30% 30% 30%/40% 40% 90% 80%;
+                    background-color: $accentOne;
+                }
+                &:hover .contactButton,
+                &:focus-within .contactButton {
+                    color: $darkSecondary
+                }
+                .contactButton {
+                    position: relative;
+                    z-index: 25;
+                }
+            }
+        }
+    }
+}
+
+.skills {
+    .wrapper {
+        .flexContainer {
+            display: flex;
+            background-color: $darkSecondary;
+            border-radius: 16px;
+            padding: 30px 40px 20px;
+            box-shadow:  -2px -2px 0 $darkTertiary;
+            .skillsList {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                li {
+                    margin-top: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: calc(100%/4 - 20px);
+                    .skill {
+                        font-size: 3rem;
+                        transition: 0.6s;
+                    }
+                    p {
+                        margin-top: -16px;
+                        font-size: 0.9rem;
+                        color: $darkQuaternary;
+                        text-align: center;
+                    }
+                    &:hover .skill {
+                        color: $accentOne;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    margin-bottom: 40px;
+    margin-top: -40px;
+    .flexContainer {
+        background-color: $darkSecondary;
+        box-shadow:  -2px -2px 0 $darkTertiary;
+        padding: 40px 40px 20px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .formContainer {
+            width: calc(50% - 20px);
+        }
+        .footerSocials {
+            display: flex;
+            align-items: flex-end;
+            width: 50%;
+            .imgContainer {
+                width: 68%;
+                margin-left: 5%;
+                margin-right: -12%;
+            }
+            .socialsList {
+                padding-top: 10%;
+                align-self: flex-start;
+                li {
+                    margin: 20px 0;
+                    transition: 0.4s;
+                    a {
+                        font-size: 0.8rem;
+                        color: $darkQuaternary;
+                        transition: 0.5s;
+                        .fa-github-square, 
+                        .fa-linkedin {
+                            color: $white;
+                            font-size: 1.2rem;
+                            border-radius: 3px;
+                            transition: 0.5s;
+                            box-shadow: -2px 0px 0px $darkSecondary, -3px 1px 0px $darkQuaternary;
+                        }
+                    }
+                    &:hover,
+                    &:focus-within {
+                        a {
+                            color: $accentOne;
+                            .fa-github-square, 
+                            .fa-linkedin {
+                                box-shadow: -2px 0px 0px $darkSecondary, -3px 1px 0px $accentOne;
+                            }
+                        }
+                    }
+                }
+                .emailContainer {
+                    h4 {
+                        margin-bottom: 10px;
+                    }
+                    .email {
+                        font-size: 0.7rem;
+                        color: $darkQuaternary;
+                        text-decoration: underline;
+                        text-decoration-color: $darkSecondary;
+                        transition: 0.5s;
+                        &:hover,
+                        &:focus {
+                            color: $accentOne;
+                            text-decoration-color: $accentOne;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

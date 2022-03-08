@@ -1,31 +1,170 @@
-body {
-    padding: 40px;
-    background-color: rgb(54, 58, 59);
-    h1 {
-        margin: 0px 0px 50px 10px;
-        font-family: sans-serif;
-        color: whitesmoke;
-        font-size: 1.6rem;
-        font-weight: lighter;
-        letter-spacing: 0.025rem;
-    }
-    .imgContainer {
-        width: 30%;
-        margin: 0 auto;
+header {
+    min-height: 100vh;
+    padding-top: 20px;
+    position: relative;
+    .mainNav {
+        margin: 20px auto;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    };
+    .heroHeader {
+        display: flex;
         position: relative;
-        left: -10%;
-        min-width: 240px;
-        &::before {
-            content: "";
-            min-width: 300px;
-            height: 80%; 
-            width: 150%;
-            top: 30%;
-            z-index: -10;
-            transform: rotate(-10deg);
-            border-radius: 70% 30% 60% 40%/30% 50% 50% 60%;
-            background-color: rgb(160, 213, 223);
+        justify-content: space-between;
+        align-items: flex-end;
+        height: calc(100vh - 120px);
+        width: 100%;
+        .imgContainer {
+            width: 30%;
+            max-height: 455px;
+            min-width: 240px;
+            margin-top: 10vh;
+            position: relative;
+            top: -40%;
+            left: 30px;
+            &::before {
+                content: "";
+                left: -20px;
+                min-width: 300px;
+                height: 70%;
+                width: 150%;
+                top: 40%;
+                z-index: -10;
+                transform: rotate(-15deg);
+                border-radius: 70% 50% 40% 60%/60% 70% 50% 60%;
+                background-color: $accentOne;
+                position: absolute;
+                box-shadow: 40px -20px 0 #2a2c2e, -30px 10px 0 #2a2c2e, -40px -20px 0 #2a2c2e, -43px -22px 0 $white;
+            }
+            .stylingElement {
+                width: 100%;
+                height: 100%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 60%;
+                    height: 20%;
+                    border: 3px solid $white;
+                    bottom: -25%;
+                    transform: rotate(0deg) perspective(200px) rotateY(45deg);
+                    border-radius: 10% 40% 20% 20%/20% 45% 30% 80%;
+                    left: 0;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 10%;
+                    height: 8%;
+                    border: 2px solid $white;
+                    bottom: -17%;
+                    transform: rotate(-30deg);
+                    left: 60%;
+                    border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
+                }
+            }
+        }
+        .textContainer {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 80%;
+            position: relative;
+            top: 15%;
+            padding-right: 40px;
+            h1 {
+                width: 5.5ch;
+            }
+        }
+        .bubble1 {
             position: absolute;
+            height: 30%;
+            width: 55%;
+            top: 10%;
+            right: -30px;
+            z-index: -10;
+            transform: rotate(7deg) perspective(1000px) rotateY(-45deg);
+            border-radius: 80% 30% 30% 30%/40% 40% 90% 80%;
+            background-color: $accentTwo;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 30%;
+                border: 4px solid $white;
+                top: 10%;
+                left: -10%;
+                transform: rotate(0deg);
+                border-radius:  70% 40% 20% 20%/40% 40% 80% 80%;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 10%;
+                height: 8%;
+                border: 2px solid $white;
+                transform: rotate(-5deg);
+                top: 50%;
+                left: 32%;
+                border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
+            }
+            .stylingElement {
+                position: absolute;
+                height: 40%;
+                width: 40%;
+                top: 15%;
+                right: -5%;
+                z-index: -10;
+                transform: rotate(-20deg);
+                background-color: $accentThree;
+                border-radius: 80% 80% 40% 90%/70% 90% 70% 90%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 120%;
+                    height: 60%;
+                    border: 4px solid $white;
+                    bottom: -110%;
+                    left: -35%;
+                    transform: rotate(0deg) perspective(700px) rotateY(-60deg);
+                    border-radius: 10% 10% 20% 20%/20% 20% 40% 80%;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 20%;
+                    height: 30%;
+                    border: 2px solid $white;
+                    transform: rotate(12deg) rotateY(180deg);
+                    bottom: -70%;
+                    left: -35%;
+                    border-radius: 40% 70% 60% 30%/40% 40% 40% 30%;
+                }
+            }
+        }
+    }
+    .scrollDown {
+        position: absolute;
+        transition: padding 0.5s, background-color 0.5s, transform 0.2s;
+        bottom: 5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $darkPrimary;
+        padding: -30px;
+        border-radius: 50%;
+        animation: slowBob 1.4s infinite linear;
+        .fa-chevron-down {
+            color: $white;
+            font-size: 3rem;
+            transition: 0.4s;
+        }
+        &:hover .fa-chevron-down,
+        &:focus .fa-chevron-down  {
+            font-size: 3.3rem;
         }
     }
 }
+
