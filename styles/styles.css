@@ -1848,7 +1848,7 @@ form .messageSent span {
     background-color: #2f3335;
     border-top: 4px solid #484d50;
     left: -10%;
-    padding: 15px 0 5px 18%;
+    padding: 15px 10px 5px 18%;
     width: 110%;
   }
 
