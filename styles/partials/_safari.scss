@@ -101,25 +101,42 @@
 
     @media (max-width: 900px) {
         .projects {
-        .flexContainer {
-            h2 {
-                padding-left: 20px;
-            }
-            .projectsList {
-                padding-top: 20px;
-                justify-content: center;
-                .projectCard {
-                    flex-basis: 70%;
-                    .cardFront {
-                        padding: 0;
-                    }
-                    .cardBack {
-                        height: auto;
+            .flexContainer {
+                h2 {
+                    padding-left: 20px;
+                }
+                .projectsList {
+                    padding-top: 20px;
+                    justify-content: center;
+                    .projectCard {
+                        flex-basis: 70%;
+                        .cardFront {
+                            padding: 0;
+                        }
+                        .cardBack {
+                            height: auto;
+                        }
                     }
                 }
             }
         }
     }
+
+    @media (max-width: 500px) {
+        .projects {
+            .wrapper {
+                .flexContainer {
+                    .projectsList {
+                        padding-top: 20px;;
+                        .projectCard {
+                            .cardBack {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }

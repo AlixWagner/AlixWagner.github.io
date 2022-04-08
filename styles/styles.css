@@ -1427,6 +1427,14 @@ form .messageSent span {
       height: auto;
     }
   }
+  @media (max-width: 500px) {
+    .projects .wrapper .flexContainer .projectsList {
+      padding-top: 20px;
+    }
+    .projects .wrapper .flexContainer .projectsList .projectCard .cardBack {
+      padding: 0;
+    }
+  }
 }
 @media (max-width: 1200px) {
   .wrapper {
