@@ -1134,6 +1134,7 @@ form .buttonContainer button {
   color: #ecf1f3;
   background-color: transparent;
   padding: none;
+  white-space: nowrap;
 }
 form .messageSent {
   display: none;
