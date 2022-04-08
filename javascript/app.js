@@ -1,13 +1,5 @@
-// eventListener for click on cards to flip
-// SECONDARY EVENTlISTENER FOR KEYPRESS!
-// toggle "flip" class - rotateY 180deg
-// NOTE TO SELF --- CSS backface-visibility: hidden and transform-style: preserve-3d
+// PLEASE CONSIDER --- stretch goal --- blobs (.floatingBubble) jiggle on click
 
-// event listener on click of down arrow to scroll to about
-
-// event listener on click of back to top arrow
-
-// PLEASE CONSIDER --- stretch goal --- blobs (.floatingBubblegit checkout) jiggle on click
 
 // create App object:
 const portfolio = {};
@@ -22,6 +14,8 @@ portfolio.form = document.querySelector("form");
 portfolio.formA = document.querySelector("#userEmail");
 portfolio.formB = document.querySelector("#userComment");
 portfolio.formC = document.querySelector("#userName");
+portfolio.safariOnly = document.querySelector(".safariChange");
+
 
 // establish general methods:
 portfolio.fadeIn = function (element, interval) {
@@ -54,6 +48,15 @@ portfolio.fadeOut = function (element, interval) {
 portfolio.flipCard = function(event) {
     this.classList.toggle("flip");
 };
+
+// update comment text on project cards for Safari only:
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    portfolio.safariOnly.textContent = "// these cards look nicer on non-Safari browsers";
+    portfolio.flipCard = function (event) {
+        return
+    };
+}
+
 // establish evenListeners on cards:
 portfolio.cards.forEach((card) => card.addEventListener("click", portfolio.flipCard));
 
