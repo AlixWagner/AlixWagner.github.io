@@ -75,6 +75,11 @@
                         transform: rotateY(0deg);
                         position:static;
                     };
+                    &:hover,
+                    &:focus {
+                        box-shadow: 0px 1px 5px #282a2b;
+                        background: #36393c65;
+                    }
                 }
             }
         }
