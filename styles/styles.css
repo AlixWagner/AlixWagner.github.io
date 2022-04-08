@@ -1401,6 +1401,10 @@ form .messageSent span {
             box-shadow: 0px 1px 5px #282a2b;
     background: #36393c65;
   }
+  .projects .flexContainer .projectCard.flip {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
 
   @media (max-width: 1020px) {
     .flexContainer .projectsList .projectCard {

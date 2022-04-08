@@ -82,6 +82,9 @@
                     }
                 }
             }
+            .projectCard.flip {
+            transform: rotateY(0deg);
+        };
         }
     }
 
