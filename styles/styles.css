@@ -1401,6 +1401,9 @@ form .messageSent span {
   }
 
   @media (max-width: 1020px) {
+    .flexContainer .projectsList .projectCard {
+      padding: 0 10px 10px;
+    }
     .flexContainer .projectsList .projectCard .cardFront {
       padding: 0;
       margin-bottom: -100px;
@@ -1429,7 +1432,7 @@ form .messageSent span {
   }
   @media (max-width: 500px) {
     .projects .wrapper .flexContainer .projectsList {
-      padding-top: 20px;
+      padding-top: 40px;
     }
     .projects .wrapper .flexContainer .projectsList .projectCard .cardBack {
       padding: 0;
